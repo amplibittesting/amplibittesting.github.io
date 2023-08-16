@@ -42,4 +42,5 @@ $(document).ready(() => {
         interactive: true,
         perturbance: 0.02,
     });
+    
 });
