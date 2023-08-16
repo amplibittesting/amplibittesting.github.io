@@ -1,3 +1,33 @@
+@font-face {
+    font-family: 'Inter';
+    src: url(fonts/Inter-Light.ttf);
+    font-weight: 300;
+}
+@font-face {
+    font-family: 'Inter';
+    src: url(fonts/Inter-Regular.ttf);
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'Inter';
+    src: url(fonts/Inter-Medium.ttf);
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'Inter';
+    src: url(fonts/Inter-SemiBold.ttf);
+    font-weight: 600;
+}
+@font-face {
+    font-family: 'Inter';
+    src: url(fonts/Inter-Bold.ttf);
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'Inter';
+    src: url(fonts/Inter-ExtraBold.ttf);
+    font-weight: 800;
+}
 
 * {
     margin: 0;
@@ -291,7 +321,7 @@ header {
 .second-nav h4 {
     color: #9B9B9B;
     font-size: 1vw;
-    font-weight: 450;
+    font-weight: 500;
     line-height: 138%;
     letter-spacing: 2%;
     text-transform: uppercase; 
@@ -303,7 +333,7 @@ header {
 .second-nav .contact a {
     color: #000;
     font-size: 1.7vw;
-    font-weight: 450;
+    font-weight: 500;
     line-height: 138%;
     text-decoration: none;
     position: relative;
@@ -701,7 +731,7 @@ header {
 .single-process h4 {
     color: #000;
     font-size: 16px;
-    font-weight: 450;
+    font-weight: 500;
     line-height: 110%;
     margin-bottom: 10px;
 }
@@ -1025,7 +1055,7 @@ footer {
     color: #FFF;
     font-size: 1.25vw;
     font-style: normal;
-    font-weight: 450;
+    font-weight: 500;
     line-height: 158.5%; 
 }
 
@@ -1033,7 +1063,7 @@ footer .mail {
     display: block;
     color: #FFF;
     font-size: 1.52vw;
-    font-weight: 450;
+    font-weight: 500;
     margin-bottom: 20px;
 }
 
@@ -1063,7 +1093,7 @@ footer .contact-info p {
 .post-footer a{
     color: #FFF;
     font-size: 1.112vw;
-    font-weight: 450; 
+    font-weight: 500; 
     text-decoration: none;
     margin-top: auto;
     margin-right: 2.01vw;
@@ -1071,7 +1101,7 @@ footer .contact-info p {
 .post-footer p {
     color: #9B9B9B;
     font-size: 1.112vw;
-    font-weight: 450; 
+    font-weight: 500; 
 }
 
 .contact-fixed {
@@ -1081,7 +1111,7 @@ footer .contact-info p {
     color: #fff;
     font-size: 0.84vw;
     font-style: normal;
-    font-weight: 450;
+    font-weight: 500;
     line-height: normal;
     letter-spacing: 0.11vw;
     text-transform: uppercase;
