@@ -446,7 +446,8 @@ header {
     width: 45%;
 }
 
-.what-we-do-services h3 {
+.what-we-do-services h3,
+.what-we-do-services h2 {
     color: #0CF;
     font-weight: 500;
     line-height: 160%;
@@ -1177,7 +1178,8 @@ footer .contact-info p {
         font-size: 70px;
         margin-bottom: 64px;
     } 
-    .what-we-do-services h3 {
+    .what-we-do-services h3,
+    .what-we-do-services h2 {
         font-size: 30px;
         margin-bottom: 20px;
     }
