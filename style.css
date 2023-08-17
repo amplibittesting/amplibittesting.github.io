@@ -135,7 +135,8 @@ header {
     z-index: 999;
     mix-blend-mode: difference;
 }
-.blue header {
+.blue header,
+.green header {
     mix-blend-mode: unset;
 }
 .green header path{
@@ -1138,6 +1139,7 @@ footer .contact-info p {
 }
 .green .contact-fixed {
     color: #000;
+    mix-blend-mode: unset;
 }
 .contact-fixed:hover {
     letter-spacing: 0.4rem;
