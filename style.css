@@ -700,7 +700,10 @@ body.blue.green-back-only {
     margin-bottom: 1.38vw;
     position: relative;
     z-index: 2;
-    background-color: inherit;
+    background-color: #0CF;
+}
+.single-service-wrapper:nth-of-type(2) .product-icon{
+    background-color: #9BE545;
 }
 .product-icons::before {
     content: "";
@@ -1395,10 +1398,6 @@ footer .contact-info p {
         width: 22px;
         height: 22px;
     }
-    .product-details h2 {
-        font-size: 20px;
-    }
-
     
     @keyframes pulse-animation {
         0% {
@@ -1407,27 +1406,6 @@ footer .contact-info p {
         100% {
             box-shadow: 0 0 0 8px rgba(255, 255, 255, 0);
         }
-    }
-    .product-icon {
-        border: 1px solid #fff;
-        width: 120px;
-        height: 120px;
-        margin-bottom: 20px;
-    }
-    .product-icons > div {
-        width: 200px;
-        margin-top: 60px;
-    }
-    .product-icons::before {
-        border-top: 2px dashed #fff;
-        top: 60px;
-        width: calc(100% - 200px);
-        left: 100px;
-        top: 120px;
-    }
-    .product-icon p,
-    .product-details h4 {
-        font-size: 24px;
     }
 }
 
@@ -1535,6 +1513,30 @@ footer .contact-info p {
     }
     .team-goals-wrapper h3 {
         min-width: 180px;
+    }
+    .product-details h2 {
+        font-size: 20px;
+    }
+    .product-icons {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .product-icon {
+        border: 1px solid #fff;
+        width: 120px;
+        height: 120px;
+        margin-bottom: 20px;
+    }
+    .product-icons > div {
+        width: 45%;
+        margin-top: 60px;
+    }
+    .product-icons::before {
+        content: none;
+    }
+    .product-icon p,
+    .product-details h4 {
+        font-size: 24px;
     }
 }
 
@@ -1661,6 +1663,24 @@ footer .contact-info p {
     }
     .careers-container a {
         font-size: 24px;
+    }
+    .product-details {
+        align-items: flex-start;
+    }
+    .product-icon {
+        width: 96px;
+        height: 96px;
+    }
+    .product-icons > div {
+        width: 50%;
+    }
+    .product-icon p, .product-details h4 {
+        font-size: 16px;
+    }
+    .product-details h2 {
+        font-size: 16px;
+        padding-bottom: 4px;
+        border-bottom: 1px solid #fff;
     }
 }
 
