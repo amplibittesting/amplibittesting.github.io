@@ -839,14 +839,20 @@ body.blue.green {
 }
 
 .career-description {
-    display: none;
     border-top: 1px solid #d9d9d9;
-    padding: 40px 0 20px;
+    transition: height .5s ease;
+    overflow  : hidden;
+}
+.career-description:not(.active) {
+    display: none;
 }
 .career-description > div {
     display: flex;
     justify-content: space-between;
     margin-bottom: 40px;
+}
+.career-description > div:first-of-type {
+    padding-top: 40px;
 }
 .career-description h4 {
     width: 20%;  
@@ -870,9 +876,6 @@ body.blue.green {
 .career-description ul {
     padding-left: 20px;
 }
-.career-opening.active .career-description {
-    display: block;
-}
 .careers-container a.career-contact {
     display: flex;
     color: #FFF;
@@ -881,7 +884,7 @@ body.blue.green {
     padding: 14px 22px;
     width: fit-content;
     margin-left: auto;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     text-decoration: none;
     border-radius: 50px;
     align-items: center;
@@ -1593,7 +1596,8 @@ footer .contact-info p {
         width: 90%;
     }
     .careers-wrapper {
-        padding: 100px 0;
+        padding: 100px 0 0;
+        background-color: #F1F3F9;
     }
     .career-opening {
         border-radius: 0;
@@ -1604,12 +1608,11 @@ footer .contact-info p {
         padding: 35px 0;
         border-top: 1px solid #d9d9d9;
     }
-    .career-opening:first-of-type h3 {
-        border-top: none;
-    }
     .career-description {
         border: none;
-        padding: 20px 0;
+    }
+    .career-description > div:first-of-type {
+        padding-top: 20px;
     }
     .career-description > div {
         flex-flow: column;
