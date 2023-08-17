@@ -136,7 +136,8 @@ header {
     mix-blend-mode: difference;
 }
 .blue header,
-.green header {
+.green header,
+.green-back-only header {
     mix-blend-mode: unset;
 }
 .green header path{
@@ -144,6 +145,12 @@ header {
 }
 .green header .hamby span{
     background-color: #000;
+}
+.green-back-only header path {
+    fill: #fff;
+}
+.green-back-only header .hamby span{
+    background-color: #fff;
 }
 .logo {
     width: 12vw;
@@ -327,7 +334,7 @@ header {
 }
 
 .second-nav h4 {
-    color: #9B9B9B;
+    color: #7e7e7e;
     font-size: 1vw;
     font-weight: 500;
     line-height: 138%;
@@ -534,7 +541,8 @@ body.blue {
     background-color: #0CF;
 }
 body.green,
-body.blue.green {
+body.blue.green,
+body.blue.green-back-only {
     background-color: #9BE545;
 }
 .single-service,
@@ -557,7 +565,8 @@ body.blue.green {
 .blue .single-service-wrapper:first-of-type {
     opacity: 1;
 }
-.green .single-service-wrapper:last-of-type {
+.green .single-service-wrapper:last-of-type,
+.green-back-only .single-service-wrapper:last-of-type {
     opacity: 1;
 }
 
@@ -647,17 +656,16 @@ body.blue.green {
 .product-details h2 {
     color: #FFF;
     text-align: center;
-    font-size: 20px;
+    font-size: 1.39vw;
     font-weight: 700;
-    line-height: 32px;
-    letter-spacing: 1.2px;
+    line-height: 1.5;
     text-transform: uppercase; 
 }
 .product-icon p,
 .product-details h4 {
     color: #FFF;
     text-align: center;
-    font-size: 24px;
+    font-size: 1.66vw;
     font-weight: 500;
     text-align: center;
 }
@@ -672,9 +680,9 @@ body.blue.green {
 .product-icons > div {
     display: flex;
     flex-flow: column;
-    width: 200px;
+    width: 13.88vw;
     align-items: center;
-    margin-top: 60px;
+    margin-top: 4.16vw;
     background-color: inherit;
 }
 .product-icons > div::before {
@@ -685,11 +693,11 @@ body.blue.green {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid #fff;
-    width: 120px;
-    height: 120px;
+    border: 0.07vw solid #fff;
+    width: 8.33vw;
+    height: 8.33vw;
     border-radius: 50%;
-    margin-bottom: 20px;
+    margin-bottom: 1.38vw;
     position: relative;
     z-index: 2;
     background-color: inherit;
@@ -697,11 +705,11 @@ body.blue.green {
 .product-icons::before {
     content: "";
     position: absolute;
-    border-top: 2px dashed #fff;
-    top: 60px;
-    width: calc(100% - 200px);
-    left: 100px;
-    top: 120px;
+    border-top: 0.14vw dashed #fff;
+    top: 4.16vw;
+    width: calc(100% - 13.88vw);
+    left: 6.94vw;
+    top: 8.33vw;
 }
 
 .process-wrapper {
@@ -1387,6 +1395,9 @@ footer .contact-info p {
         width: 22px;
         height: 22px;
     }
+    .product-details h2 {
+        font-size: 20px;
+    }
 
     
     @keyframes pulse-animation {
@@ -1396,6 +1407,27 @@ footer .contact-info p {
         100% {
             box-shadow: 0 0 0 8px rgba(255, 255, 255, 0);
         }
+    }
+    .product-icon {
+        border: 1px solid #fff;
+        width: 120px;
+        height: 120px;
+        margin-bottom: 20px;
+    }
+    .product-icons > div {
+        width: 200px;
+        margin-top: 60px;
+    }
+    .product-icons::before {
+        border-top: 2px dashed #fff;
+        top: 60px;
+        width: calc(100% - 200px);
+        left: 100px;
+        top: 120px;
+    }
+    .product-icon p,
+    .product-details h4 {
+        font-size: 24px;
     }
 }
 
