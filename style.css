@@ -719,20 +719,22 @@ body.blue.green-back-only {
     min-height: 100vh;
     width: 100%;
     padding: 200px 100px;
+    display: flex;
 }
 
 .process-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+    width: 100%;
 }
 
 .process-animation {
-    width: 45%;
+    width: 40%;
 }
 
 .process-description {
-    width: 45%;
+    width: 40%;
     display: flex;
     flex-flow: column;
 }
@@ -1194,6 +1196,66 @@ footer .contact-info p {
 .contact-fixed:hover::after {
     width: 1.52vw;
     height: 1.52vw;
+}
+.process-cycle {
+    background: url(img/product-arrows.svg) no-repeat 50%;
+    background-size: contain;
+    width: 25vw;
+    height: 25vw;
+    margin: auto;
+    position: relative;
+}
+.process-icon {
+    position: absolute;
+    border: 0.69vw solid #dedede;
+    border-radius: 50%;
+    width: 55%;
+    height: 55%;
+}
+.process-icon:first-of-type {
+    left: 110%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.process-icon:nth-of-type(2) {
+    left: 15%;
+    bottom: -5%;
+    transform: translate(-50%, 50%);
+}
+.process-icon:last-of-type {
+    left: 15%;
+    top: -5%;
+    transform: translate(-50%, -50%);
+}
+.process-icon div {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+}
+
+.process-icon.active {
+    width: 75%;
+    height: 75%;
+    background-color: #fff;
+}
+.process-icon.active::before {
+    position: absolute;
+    content: "";
+    display: block;
+    width: calc(100% + 1.5vw);
+    height: calc(100% + 1.5vw);
+    background: linear-gradient(113deg, #9BE545 0%, #0CF 100%);
+    border-radius: 50%;
+    top: -0.75vw;
+    left: -0.75vw;
+    right: -0.75vw;
+    bottom: -0.75vw;
 }
 
   
