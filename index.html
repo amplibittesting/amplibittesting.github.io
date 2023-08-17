@@ -119,7 +119,11 @@
             <div class="banner-text-wrapper">
                 <p class="pretitle">All-in-one software agency</p>
                 <h1 class="amplify">Amplify your</h1>
-                <h2 class="amplify-benefits">business</h2>
+                <div class="benefits-container">
+                    <h2 class="amplify-benefits active">potential</h2>
+                    <h2 class="amplify-benefits">idea</h2>
+                    <h2 class="amplify-benefits">business</h2>
+                </div>
             </div>
         </div>
 
@@ -369,5 +373,7 @@
                 <p>Amplibit 2023. All rights reserved.</p>
             </div>
         </footer>
+        <script>document.addEventListener("DOMContentLoaded",function(){var a=document.querySelectorAll(".amplify-benefits");setInterval(function(){var c=Array.from(a).findIndex(function(b){return b.classList.contains("active")});Array.from(a).forEach(function(b){b.classList.remove("active")});a[(c+1)%a.length].classList.add("active")},2300)});</script>
+        <script>document.addEventListener("DOMContentLoaded",function(){function c(){d.classList.add("hover")}function e(){d.classList.remove("hover")}var d=document.getElementById("cursor"),b=document.querySelector(".hamby"),a=document.querySelector(".lets-talk"),g=document.querySelector(".logo"),f=document.querySelectorAll("a");document.body.addEventListener("mousemove",function(h){d.style.left=h.clientX+"px";d.style.top=h.clientY+"px"});b.addEventListener("click",function(){b.classList.contains("active")?(b.classList.remove("active"),document.body.classList.remove("navigationActive")):(b.classList.add("active"),document.body.classList.add("navigationActive"))});b.addEventListener("mouseenter",c);b.addEventListener("mouseleave",e);a.addEventListener("mouseenter",c);a.addEventListener("mouseleave",e);g.addEventListener("mouseenter",c);g.addEventListener("mouseleave",e);for(a=0;a<f.length;a++)f[a].addEventListener("mouseenter",c),f[a].addEventListener("mouseleave",e)});</script>
     </body>
 </html>
