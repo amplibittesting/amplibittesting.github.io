@@ -373,51 +373,7 @@
         </footer>
         <script>document.addEventListener("DOMContentLoaded",function(){var a=document.querySelectorAll("h2.amplify-benefits");setInterval(function(){var c=Array.from(a).findIndex(function(b){return b.classList.contains("active")});Array.from(a).forEach(function(b){b.classList.remove("active")});a[(c+1)%a.length].classList.add("active")},2300)});</script>
         <script>document.addEventListener("DOMContentLoaded",function(){function c(){d.classList.add("hover")}function e(){d.classList.remove("hover")}var d=document.getElementById("cursor"),b=document.querySelector(".hamby"),a=document.querySelector(".lets-talk"),g=document.querySelector(".logo"),f=document.querySelectorAll("a");document.body.addEventListener("mousemove",function(h){d.style.left=h.clientX+"px";d.style.top=h.clientY+"px"});b.addEventListener("click",function(){b.classList.contains("active")?(b.classList.remove("active"),document.body.classList.remove("navigationActive")):(b.classList.add("active"),document.body.classList.add("navigationActive"))});b.addEventListener("mouseenter",c);b.addEventListener("mouseleave",e);a.addEventListener("mouseenter",c);a.addEventListener("mouseleave",e);g.addEventListener("mouseenter",c);g.addEventListener("mouseleave",e);for(a=0;a<f.length;a++)f[a].addEventListener("mouseenter",c),f[a].addEventListener("mouseleave",e)});</script>
-        <script>function throttle(callback, delay) {
-            let lastExecution = 0;
-            return function () {
-                const now = new Date().getTime();
-                if (now - lastExecution >= delay) {
-                    lastExecution = now;
-                    callback.apply(this, arguments);
-                }
-            };
-        }
-        
-        const throttledScrollHandler = throttle(function (e) {
-            const firstServiceTop = document.querySelector(".first-service").getBoundingClientRect().top;
-            const secondServiceTop = document.querySelector(".second-service").getBoundingClientRect().top;
-            const secondServiceBottom = document.querySelector(".second-service").getBoundingClientRect().bottom;
-            const firstServiceBottom = document.querySelector(".first-service").getBoundingClientRect().bottom;
-        
-            if (firstServiceTop - 0.5 * window.innerHeight < 0) {
-                document.body.classList.add("blue");
-            } else {
-                document.body.classList.remove("blue");
-            }
-        
-            if (secondServiceTop - 0.5 * window.innerHeight < 0) {
-                document.body.classList.add("green");
-            } else {
-                document.body.classList.remove("green");
-            }
-        
-            if (!secondServiceBottom) {
-                document.body.classList.remove("green");
-            }
-        
-            if (!firstServiceBottom) {
-                document.body.classList.remove("blue");
-            }
-        
-            if (firstServiceBottom < 0) {
-                document.body.classList.add("black");
-            } else {
-                document.body.classList.remove("black");
-            }
-        }, 200); // Adjust the delay as needed (200 milliseconds in this example)
-        
-        document.addEventListener("scroll", throttledScrollHandler);</script>
+        <script>document.addEventListener("scroll",function(e){0>document.querySelector(".first-service").getBoundingClientRect().top-.5*window.innerHeight?document.body.classList.add("blue"):document.body.classList.remove("blue"),0>document.querySelector(".second-service").getBoundingClientRect().top-.5*window.innerHeight?document.body.classList.add("green"):document.body.classList.remove("green"),0>document.querySelector(".second-service").getBoundingClientRect().bottom&&document.body.classList.remove("green"),0>document.querySelector(".first-service").getBoundingClientRect().bottom&&document.body.classList.remove("blue"),0>document.querySelector(".first-service").getBoundingClientRect().bottom?document.body.classList.add("black"):document.body.classList.remove("black")});</script>
         <script src="base.js" defer></script>
     </body>
 </html>

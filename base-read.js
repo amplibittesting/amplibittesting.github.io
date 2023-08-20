@@ -61,6 +61,90 @@ buttons.forEach((button, index) => {
     });
 });
 
+
+
+  // process animation:
+  
+    let processActive = 1;
+
+const processElements = document.querySelectorAll(".single-process");
+const containerProcesses = document.querySelectorAll(".process-icon");
+const mobileProcesses = document.querySelectorAll(".process-icons-mobile div");
+
+function slideDown(element) {
+    element.style.height = "auto";
+
+    var elementHeight = element.clientHeight + "px";
+    element.style.height = "0px";
+
+    setTimeout(function () {
+        element.style.height = elementHeight;
+    }, 0);
+}
+
+function slideUp(element) {
+    var elementHeight = element.clientHeight + "px";
+    element.style.height = elementHeight;
+
+    element.addEventListener(
+        "transitionend",
+        function (event) {
+            if (event.propertyName === "height" && element.style.height === "0px") {
+                element.style.height = null;
+            }
+        },
+        { once: true }
+    );
+
+    element.style.height = "0px";
+}
+
+function updateActiveStatus(processNumber) {
+    processElements.forEach((element) => {
+        slideUp(element.querySelector("p"));
+        element.classList.remove("active");
+    });
+
+    const selectedProcess = processElements[processNumber - 1];
+    selectedProcess.classList.add("active");
+    processActive = processNumber;
+    document.querySelector(".process-cycle").setAttribute("data-active", processActive);
+
+    containerProcesses.forEach((process, index) => {
+        if (index === processActive - 1) {
+            process.classList.add("active");
+        } else {
+            process.classList.remove("active");
+        }
+    });
+    mobileProcesses.forEach((process, index) => {
+        if (index === processActive - 1) {
+            process.classList.add("active");
+        } else {
+            process.classList.remove("active");
+        }
+    });
+
+    slideDown(selectedProcess.querySelector("p"));
+}
+
+processElements.forEach((processElement) => {
+    processElement.addEventListener("click", () => {
+        if (!processElement.classList.contains("active")) {
+            updateActiveStatus(parseInt(processElement.querySelector("h4").textContent));
+        }
+    });
+});
+
+containerProcesses.forEach((process, index) => {
+    process.addEventListener("click", () => {
+        if (!process.classList.contains("active")) {
+            updateActiveStatus(index + 1);
+        }
+    });
+});
+updateActiveStatus(1);
+
     */
         $(".banner-wrapper").ripples({
             resolution: 512,

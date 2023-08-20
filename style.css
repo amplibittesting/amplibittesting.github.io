@@ -46,7 +46,7 @@ body {
     width: 100%;
     height: 100%;
     overflow-x: hidden;
-    background-color: #fff;
+    background-color: #000;
     transition: background-color 1s ease;
 }
 body.navigationActive {
@@ -452,7 +452,7 @@ header {
 }
 .services-v2-wrapper {
     background-color: #fff;
-    padding: 100px;
+    padding: 6.94vw;
 }
 
 .lets-talk {
@@ -546,18 +546,18 @@ header {
 
 .services-wrapper {
     width: 100%;
+    padding: 6.94vw 0;
 }
 .services-v2-wrapper > h1 {
     color: #000;
-    font-size: 70px;
+    font-size: 4.86vw;
     font-weight: 500;
     line-height: 110%;
-    padding: 100px;
+    padding: 6.94vw;
 }
 
 .single-service-wrapper {
-    min-height: 100vh;
-    padding: 200px 100px;
+    padding: 6.94vw;
     display: flex;
     align-items: center;
     flex-flow: column;
@@ -607,12 +607,12 @@ body.blue.green-back-only {
     font-weight: 500; 
     margin-bottom: 1vh;
 }
-.single-service-v2 h3 {
+.single-service-v2 h2 {
     color: #000;
-    font-size: 16px;
+    font-size: 1.112vw;
     font-weight: 500;
     text-transform: uppercase; 
-    margin-bottom: 10px;
+    margin-bottom: 0.69vw;
 }
 
 .single-service h1 {
@@ -624,10 +624,10 @@ body.blue.green-back-only {
 }
 .single-service-v2 h1 {
     color: #000;
-    font-size: 40px;
+    font-size: 2.77vw;
     font-weight: 500;
     line-height: 110%; 
-    margin-bottom: 30px;
+    margin-bottom: 2.08vw;
 }
 .single-service p {
     color: #FFF;
@@ -638,10 +638,10 @@ body.blue.green-back-only {
 }
 .single-service-v2 p {
     color: #000;
-    font-size: 18px;
+    font-size: 1.25vw;
     font-weight: 400;
-    line-height: 30px;
-    margin-bottom: 30px;
+    line-height: 1.6;
+    margin-bottom: 2.08vw;
 }
 .single-service a {
     display: flex;
@@ -660,14 +660,17 @@ body.blue.green-back-only {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 25px;
+    border-radius: 1.73vw;
     background-color: #0CF;
-    height: 50px;
-    width: 150px;
+    height: 3.46vw;
+    width: 10.42vw;
     color: #FFF;
-    font-size: 16px;
+    font-size: 1.112vw;
     font-weight: 700; 
     text-decoration: none;
+}
+.single-service-v2-wrapper:last-of-type a {
+    background-color: #9BE545;
 }
 
 .product-details {
@@ -744,8 +747,9 @@ body.blue.green-back-only {
 .process-wrapper {
     min-height: 100vh;
     width: 100%;
-    padding: 200px 100px;
+    padding: 13.88vw 6.94vw;
     display: flex;
+    background-color: #F9FAFF;
 }
 
 .process-container {
@@ -756,61 +760,60 @@ body.blue.green-back-only {
 }
 
 .process-animation {
-    width: 40%;
+    width: 35%;
 }
 
 .process-description {
-    width: 40%;
+    width: 35%;
     display: flex;
     flex-flow: column;
 }
 
 .process-description h1 {
     color: #000;
-    font-size: 80px;
+    font-size: 5.55vw;
     font-weight: 500;
     line-height: 110%;
-    margin-bottom: 30px;
+    margin-bottom: 2.08vw;
 }
 
 .single-process {
-    padding-left: 5px;
+    padding-left: 0.348vw;
 }
 
 .single-process:not(:last-of-type) {
-    margin-bottom: 20px;
-    border-bottom: 1px solid #d9d9d9;
-    padding-bottom: 20px;
+    margin-bottom: 1.38vw;
+    border-bottom: 0.07vw solid #d9d9d9;
+    padding-bottom: 1.38vw;
 }
 
 .single-process h4 {
     color: #000;
-    font-size: 16px;
+    font-size: 1.112vw;
     font-weight: 500;
     line-height: 110%;
-    margin-bottom: 10px;
+    margin-bottom: 0.69vw;
 }
 
 .single-process h2 {
     color: #000;
-    font-size: 34px;
+    font-size: 2.36vw;
     font-weight: 500; 
-    margin-bottom: 15px;
+    margin-bottom: 1.042vw;
 }
 .single-process p {
     color: #000;
-    font-size: 18px;
+    font-size: 1.25vw;
     font-weight: 400;
-    line-height: 36px; 
-    display: none;
-}
-.single-process.active p {
-    display: block;
+    line-height: 2; 
+    transition: height 0.5s ease;
+    height: 0;
+    overflow: hidden;
 }
 .single-service-v2-wrapper {
     background-color: #F4F6FA;
-    padding: 100px;
-    margin-bottom: 100px;
+    padding: 6.9vw;
+    margin-bottom: 6.9vw;
 }
 
 .full-width-image {
@@ -823,6 +826,7 @@ body.blue.green-back-only {
 }
 .careers-wrapper {
     padding: 6.94vw 13.88vw;
+    background-color: #fff;
 }
 .careers-container {
     margin: auto;
@@ -992,6 +996,7 @@ footer {
 }
 .team-goals-wrapper {
     padding: 0 13.88vw 25vh;
+    background-color: #fff;
 }
 .team-goals-wrapper > div > div {
     display: flex;
@@ -1239,6 +1244,7 @@ footer .contact-info p {
     height: 25vw;
     margin: auto;
     position: relative;
+    transition: transform 1s ease;
 }
 .process-icon {
     position: absolute;
@@ -1246,6 +1252,7 @@ footer .contact-info p {
     border-radius: 50%;
     width: 55%;
     height: 55%;
+    transition: transform 1s ease;
 }
 .process-icon:first-of-type {
     left: 110%;
@@ -1279,18 +1286,94 @@ footer .contact-info p {
     height: 75%;
     background-color: #fff;
 }
-.process-icon.active::before {
+.process-icon::before {
     position: absolute;
     content: "";
     display: block;
-    width: calc(100% + 1.5vw);
-    height: calc(100% + 1.5vw);
+    width: 100%;
+    height: 100%;
     background: linear-gradient(113deg, #9BE545 0%, #0CF 100%);
     border-radius: 50%;
+}
+.process-icon.active::before {
+    width: calc(100% + 1.5vw);
+    height: calc(100% + 1.5vw);
     top: -0.75vw;
     left: -0.75vw;
     right: -0.75vw;
     bottom: -0.75vw;
+}
+.process-icon svg {
+    flex: 0.5;
+    margin-bottom: 5%;
+}
+.process-icon h1 {
+    color: #000;
+    font-size: 0.8vw;
+    font-weight: 600;
+    max-width: 80%;
+    text-align: center;
+}
+.process-icon.active h1 {
+    font-size: 1.25vw;
+}
+.process-cycle[data-active="2"] {
+    transform: rotate(-120deg);
+    background: url(img/product-arrows-4.svg) no-repeat 50%;
+    background-size: contain;
+}
+
+.process-cycle[data-active="2"] .process-icon:last-of-type {
+    left: 20%;
+    top: -5%;
+    transform: translate(-50%, -50%) rotate(120deg);
+}
+.process-cycle[data-active="2"] .process-icon:first-of-type {
+    transform: translate(-50%, -50%) rotate(120deg);
+}
+.process-cycle[data-active="2"] .process-icon:nth-of-type(2) {
+    transform: translate(-50%, 50%) rotate(120deg);
+}
+
+.process-cycle[data-active="3"] {
+    transform: rotate(-240deg);
+    background: url(img/product-arrows-7.svg) no-repeat 50%;
+    background-size: contain;
+}
+
+.process-cycle[data-active="3"] .process-icon:last-of-type {
+    left: 20%;
+    top: -5%;
+    transform: translate(-50%, -50%) rotate(240deg);
+}
+.process-cycle[data-active="3"] .process-icon:first-of-type {
+    transform: translate(-50%, -50%) rotate(240deg);
+}
+.process-cycle[data-active="3"] .process-icon:nth-of-type(2) {
+    left: 20%;
+    bottom: -5%;
+    transform: translate(-50%, 50%) rotate(240deg);
+}
+.process-icons-mobile {
+    display: none;
+    height: 200px;
+    width: 100%;
+    position: relative;
+}
+.process-icons-mobile div {
+    width: 100%;
+    opacity: 0;
+    position: absolute;
+    top: 10px;
+    left: 25px;
+    transition: opacity 0.3s ease;
+}
+.process-icons-mobile div.active {
+    opacity: 1;
+}
+.process-icons-mobile svg {
+    max-width: 60%;
+    max-height: 150px;
 }
 
   
@@ -1302,7 +1385,161 @@ footer .contact-info p {
         box-shadow: 0 0 0 0.6vw rgba(255, 255, 255, 0);
     }
 }
-  
+
+
+/* form */
+.contact-form-wrapper {
+    padding: 6.94vw;
+    margin: auto;
+}
+.contact-form-wrapper form {
+    background-color: #f5f5f5;
+    padding: 60px 97px 80px;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.input-container {
+    width: 48%;
+    position: relative;
+    margin-bottom: 18px;
+}
+.input-container.full-width {
+    width: 100%;
+}
+.input-container input {
+    width: 100%;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #d6d6d6;
+    line-height: 45px;
+    font-size: 20px;
+    color: #1d1d1d;
+    transition: border-color 0.3s ease;
+}
+.input-container input:focus {
+    outline: none;
+}
+.input-container label {
+    position: absolute;
+    left: 0;
+    top: 10px;
+    font-size: 16px;
+    transition: font-size 0.3s ease-in, top 0.2s ease-in;
+    cursor: text;
+}
+.input-container input:focus + label,
+.input-container textarea:focus + label {
+    font-size: 10px;
+    top: 0;
+}
+.input-container input:not([value=""]):not(:focus) + label,
+.input-container textarea:not([value=""]):not(:focus) + label {
+    font-size: 10px;
+    top: 0;
+}
+.input-container.empty input[name="name"],
+.input-container.wrong input[name="name"],
+.input-container.empty input[name="email"],
+.input-container.wrong input[name="email"], 
+.input-container.empty input[name="phone"],
+.input-container.wrong input[name="phone"], 
+.input-container.empty input[name="title"], 
+.textarea-input.empty {
+    border-color: red;
+}
+.input-container.success input[name="name"],
+.input-container.success input[name="email"],
+.input-container.success input[name="phone"],
+.input-container.success input[name="title"], 
+.textarea-input.success {
+    border-color: lime;
+}
+.input-container.empty .validation-message span:first-of-type {
+    opacity: 1;
+    color: red;
+}
+.input-container.wrong .validation-message span:last-of-type {
+    opacity: 1;
+    color: red;
+    position: absolute;
+    left: 10px;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active,
+input:-internal-autofill-selected,
+input:-internal-autofill-previewed {
+    background-color: #f5f5f5 !important;
+    -webkit-box-shadow: 0 0 0 30px #f5f5f5 inset !important;
+}
+.validation-message {
+    line-height: 1;
+    padding: 5px 10px;
+    font-size: 14px;
+    position: relative;
+}
+.validation-message span {
+    opacity: 0;
+    left: 0;
+}
+textarea {
+    resize: none;
+    width: 100%;
+    height: 80px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    margin-top: 20px;
+    font-size: 20px;
+}
+.email-sent {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 30px;
+    margin-bottom: 0;
+    opacity: 0;
+    transition: height 2s ease,margin-bottom 2s ease;
+}
+.success .email-sent {
+    margin-bottom: 50px;
+    height: 20px;
+    opacity: 1;
+}
+.email-sent p {
+    text-align: center;
+}
+textarea:focus {
+    outline: none;
+}
+.textarea-input {
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #d6d6d6;
+    margin-bottom: 30px;
+    transition: border-color 0.3s ease;
+}
+.submit-button {
+    width: 220px;
+    height: 60px;
+    background-color: #1d1d1d;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    margin: auto;
+    border: 2px solid #1d1d1d;
+    box-shadow: inset 0 0 0px transparent;
+    transition: box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+.submit-button:hover {
+    box-shadow: inset 0 60px 0px #f5f5f5;
+    color: #1d1d1d;
+}
 
 @media screen and (max-width: 1280px) {
     .logo {
@@ -1504,6 +1741,79 @@ footer .contact-info p {
             box-shadow: 0 0 0 8px rgba(255, 255, 255, 0);
         }
     }
+    .process-description h1 {
+        font-size: 80px;
+        margin-bottom: 30px;
+    }
+    
+    .single-process {
+        padding-left: 5px;
+    }
+
+    .single-process:not(:last-of-type) {
+        margin-bottom: 20px;
+        border-bottom: 1 solid #d9d9d9;
+        padding-bottom: 20px;
+    }
+
+    .single-process h4 {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    
+    .single-process h2 {
+        font-size: 34px;
+        margin-bottom: 15px;
+    }
+    .single-process p {
+        font-size: 18px;
+    }
+    .single-service-v2 h1 {
+        font-size: 40px;
+        margin-bottom: 30px;
+    }
+    .single-service-v2 p {
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+    .single-service-v2 h2 {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    .single-service-v2-wrapper {
+        padding: 50px;
+        margin-bottom: 50px;
+    }
+    .services-v2-wrapper {
+        padding: 100px;
+    }
+    .services-v2-wrapper > h1 {
+        font-size: 70px;
+        padding: 50px;
+    }
+    
+    .single-service-wrapper {
+        padding: 100px;
+        display: flex;
+        align-items: center;
+        flex-flow: column;
+    }
+    .single-service-v2 a {
+        border-radius: 25px;
+        height: 50px;
+        width: 150px;
+        font-size: 16px;
+    }
+    
+    .process-wrapper {
+        padding: 200px 50px;
+    }
+    .process-container {
+        justify-content: space-between;
+    }
+    .process-description {
+        width: 45%;
+    }
 }
 
 @media screen and (max-width: 960px) {
@@ -1556,20 +1866,23 @@ footer .contact-info p {
         flex-flow: column-reverse;
     }
 
-    .single-service img, 
-    .single-service-v2 img {
+    .single-service img{
         width: 70%;
         margin-bottom: 50px;
     }
-    
-    .single-service div,
-    .single-service-v2 div {
+    .single-service-v2 img {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    .single-service div {
         width: 70%;
     }
-    
+    .single-service-v2 div {
+        width: 100%;
+    }
     .single-service h3,
     .single-service h2,
-    .single-service-v2 h3 {
+    .single-service-v2 h2 {
         font-size: 16px;
         margin-bottom: 10px;
     }
@@ -1595,6 +1908,9 @@ footer .contact-info p {
     .tell-us-about-it h1,
     .tell-us-about-it a {
         font-size: 50px;
+    }
+    .services-v2-wrapper {
+        padding: 50px;
     }
     footer {
         padding: 0 50px;
@@ -1636,6 +1952,49 @@ footer .contact-info p {
     .product-details h4 {
         font-size: 24px;
     }
+    .process-animation {
+        display: none;
+    }
+    .process-description {
+        width: 100%;
+    }
+    .process-icons-mobile {
+        display: block;
+    }
+    .single-process h4 {
+        display: none;
+    }
+    .single-process h2 {
+        display: flex;
+        align-items: center;
+        position: relative;
+        width: fit-content;
+        padding-right: 40px;
+    }
+    .single-process h2 span {
+        font-size: 20px;
+        margin-right: 20px;
+        font-weight: 500;
+    }
+    .single-process h2::after {
+        content: "";
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-70%) rotate(45deg);
+        border-right: 2px solid #000;
+        border-bottom: 2px solid #000;
+        width: 8px;
+        height: 8px;
+        transition: transform 0.3s ease;
+    }
+    .single-process.active h2:after {
+        transform: translateY(-30%) rotate(225deg);
+    }
+    .process-container {
+        align-items: flex-start;
+    }
 }
 
 @media screen and (max-width: 680px) {
@@ -1658,7 +2017,10 @@ footer .contact-info p {
     
     .banner-text-wrapper .amplify-benefits,
     .banner-text-wrapper .amplify {
-        font-size: 62px;
+        font-size: 18vw;
+    }
+    .banner-text-wrapper .pretitle {
+        font-size: 4vw;
     }
 
     .single-service div,
@@ -1668,7 +2030,7 @@ footer .contact-info p {
     
     .single-service h3,
     .single-service h2,
-    .single-service-v2 h3 {
+    .single-service-v2 h2 {
         font-size: 15px;
         margin-bottom: 15px;
     }
@@ -1781,6 +2143,15 @@ footer .contact-info p {
         padding-bottom: 4px;
         border-bottom: 1px solid #fff;
     }
+    .single-process h2 {
+        font-size: 24px;
+    }
+    .single-process h2 span {
+        font-size: 16px;
+    }
+    .process-description h1 {
+        font-size: 40px;
+    }
 }
 
 @media screen and (max-width: 580px) {
@@ -1862,6 +2233,18 @@ footer .contact-info p {
     footer {
         padding: 0 25px;
     }
+    .services-v2-wrapper {
+        padding: 100px 25px;
+    }
+    .services-v2-wrapper > h1 {
+        padding: 0;
+        font-size: 40px;
+    }
+    .single-service-v2-wrapper {
+        padding: 50px 0;
+        margin-bottom: 50px;
+        background-color: #fff;
+    }
     .overlay-wrapper img {
         display: none;
     }
@@ -1888,5 +2271,8 @@ footer .contact-info p {
     }
     .main-nav a:nth-of-type(5) {
         transition: bottom 0.2s ease 0.7s, opacity 0.2s ease 0.7s;
+    }
+    .process-wrapper {
+        padding: 100px 25px;
     }
 }
