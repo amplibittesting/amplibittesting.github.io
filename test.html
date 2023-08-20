@@ -380,12 +380,13 @@
 https://cdn.jsdelivr.net/npm/jquery.ripples@0.6.3/dist/jquery.ripples-min.min.js
 " async></script>
         <script defer>$(document).ready(() => {
-    $(".banner-wrapper").ripples({
+            $('body').one('mousemove', function() {  $(".banner-wrapper").ripples({
         resolution: 512,
         dropRadius: 20,
         interactive: true,
         perturbance: 0.02,
     });
-});</script>
+}); } );
+   </script>
     </body>
 </html>
