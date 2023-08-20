@@ -376,7 +376,33 @@
         <script>document.addEventListener("DOMContentLoaded",function(){var a=document.querySelectorAll("h2.amplify-benefits");setInterval(function(){var c=Array.from(a).findIndex(function(b){return b.classList.contains("active")});Array.from(a).forEach(function(b){b.classList.remove("active")});a[(c+1)%a.length].classList.add("active")},2300)});</script>
         <script>document.addEventListener("DOMContentLoaded",function(){function c(){d.classList.add("hover")}function e(){d.classList.remove("hover")}var d=document.getElementById("cursor"),b=document.querySelector(".hamby"),a=document.querySelector(".lets-talk"),g=document.querySelector(".logo"),f=document.querySelectorAll("a");document.body.addEventListener("mousemove",function(h){d.style.left=h.clientX+"px";d.style.top=h.clientY+"px"});b.addEventListener("click",function(){b.classList.contains("active")?(b.classList.remove("active"),document.body.classList.remove("navigationActive")):(b.classList.add("active"),document.body.classList.add("navigationActive"))});b.addEventListener("mouseenter",c);b.addEventListener("mouseleave",e);a.addEventListener("mouseenter",c);a.addEventListener("mouseleave",e);g.addEventListener("mouseenter",c);g.addEventListener("mouseleave",e);for(a=0;a<f.length;a++)f[a].addEventListener("mouseenter",c),f[a].addEventListener("mouseleave",e)});</script>
         <script>document.addEventListener("scroll",function(e){0>document.querySelector(".first-service").getBoundingClientRect().top-.5*window.innerHeight?document.body.classList.add("blue"):document.body.classList.remove("blue"),0>document.querySelector(".second-service").getBoundingClientRect().top-.5*window.innerHeight?document.body.classList.add("green"):document.body.classList.remove("green"),0>document.querySelector(".second-service").getBoundingClientRect().bottom&&document.body.classList.remove("green"),0>document.querySelector(".first-service").getBoundingClientRect().bottom&&document.body.classList.remove("blue"),0>document.querySelector(".first-service").getBoundingClientRect().bottom?document.body.classList.add("black"):document.body.classList.remove("black")});</script>
-        <script></script>
-        <script></script>
+        <script>!function(e,t){"object"==typeof exports&&"undefined"!=typeof module?t(require("jquery")):"function"==typeof define&&define.amd?define(["jquery"],t):t(e.$)}(this,function(e){"use strict";
+        </script>
+        <script>function t(e){return"%"==e[e.length-1]}
+function r(e){var t=e.split(" ");if(1!==t.length)return t.map(function(t){switch(e){
+</script>
+        <script>switch(e){case"center":return["50%","50%"];case"top":return["50%","0"];case"bottom":return["50%","100%"];
+case"left":return["0","50%"];case"right":return["100%","50%"];default:return[e,"50%"]}}
+</script>
+        <script>function i(e,t,r){function i(e,t){var r=s.createShader(e);if(s.shaderSource(r,t),s.compileShader(r),!s.getShaderParameter(r,s.COMPILE_STATUS))
+</script>
+        <script>throw new Error("compile error: "+s.getShaderInfoLog(r));return r}var o={};if(o.id=s.createProgram(),
+s.attachShader(o.id,i(s.VERTEX_SHADER,e)),s.attachShader(o.id,i(s.FRAGMENT_SHADER,t)),s.linkProgram(o.id),
+!s.getProgramParameter(o.id,s.LINK_STATUS))throw new Error("link error: "+s.getProgramInfoLog(o.id));
+o.uniforms={},o.locations={},s.useProgram(o.id),s.enableVertexAttribArray(0);
+</script>
+        <script>for(var n,a,u=/uniform (\w+) (\w+)/g,h=e+t;null!=(n=u.exec(h));)a=n[2],o.locations[a]=s.getUniformLocation(o.id,a);return o}
+</script>
+        <script>function o(e,t){s.activeTexture(s.TEXTURE0+(t||0)),s.bindTexture(s.TEXTURE_2D,e)}
+function n(e){var t=/url\(["']?([^"']*)["']?\)/.exec(e);return null==t?null:t[1]}
+function a(e){return e.match(/^data:/)}
+</script>
+<script>$(document).ready(() => {
+    $(".banner-wrapper").ripples({
+        resolution: 512,
+        dropRadius: 20,
+        interactive: true,
+        perturbance: 0.02,
+    });</script>
     </body>
 </html>
