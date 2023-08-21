@@ -176,9 +176,9 @@ header {
 }
 .hamby {
     position: relative;
-    width: 44px;
-    padding: 10px;
-    height: 32px;
+    width: 3.05vw;
+    padding: 0.694vw;
+    height: 2.22vw;
     display: flex;
     flex-flow: column;
     position: relative;
@@ -195,20 +195,43 @@ header {
 }
 .hamby span {
     position: absolute;
-    top: 10px;
-    width: calc(100% - 20px);
-    right: 10px;
-    height: 3px;
+    top: 0.694vw;
+    width: calc(100% - 1.38vw);
+    right: 0.694vw;
+    height: 0.2vw;
     background-color: #fff;
+    transition: top 0.3s ease, transform 0.4s ease 0.4s;
+    transform-origin: center center;
+    transform: rotate(0);
 }
 
 .hamby span:nth-of-type(2) {
-    bottom: 10px;
+    bottom: 0.694vw;
     top: unset;
     transition: width 0.3s ease;
+    transition: bottom 0.3s ease, transform 0.4s ease 0.4s;
+    transform-origin: center center;
+    transform: rotate(0);
 }
 .hamby:hover span {
-    width: calc(100% - 20px);
+    width: calc(100% - 1.38vw);
+}
+.hamby.active span {
+    top: 50%;
+    transform: rotate(45deg);
+    transform-origin: center center;
+}
+
+.hamby.active span:nth-of-type(2) {
+    bottom: 50%;
+    transform: rotate(-45deg);
+    transform-origin: center center;
+}
+.hamby.ready span {
+    transition: top 0.3s ease 0.5s, transform 0.4s ease;
+}
+.hamby.ready span:nth-of-type(2) {
+    transition: bottom 0.3s ease 0.5s, transform 0.4s ease;
 }
 
 
@@ -391,12 +414,18 @@ header {
 .second-nav .contact a:hover:after {
     width: 100%;
 }
-
-.second-nav .social-media div{
+.contact-form-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.second-nav .social-media div,
+.contact-form-wrapper .social-media div {
     display: flex;
     margin-top: 0.5vh;
 }
-.second-nav .social-media a {
+.second-nav .social-media a,
+.contact-form-wrapper .social-media a {
     display: flex;
     width: 1.53vw;
     margin-right: 1.3vw;
@@ -492,7 +521,8 @@ header {
 
 .what-we-do-wrapper h1,
 .how-we-do-it-wrapper h1,
-.about-us-wrapper h1 {
+.about-us-wrapper h1,
+.contact-form-wrapper h1 {
     color: #FFF;
     font-size: 4.87vw;
     font-weight: 600;
@@ -500,6 +530,10 @@ header {
     margin-bottom: 8vh;
 }
 
+.contact-form-wrapper h1 {
+    width: 100%;
+    margin-bottom: 10vh;
+}
 .about-us-wrapper h1 {
     color: #000;
 }
@@ -1389,22 +1423,24 @@ footer .contact-info p {
 
 /* form */
 .contact-form-wrapper {
-    padding: 6.94vw;
+    padding: 13.88vw 13.08vw 0;
     margin: auto;
 }
+.contact-form-wrapper img {
+    width: 100%;
+}
 .contact-form-wrapper form {
-    background-color: #f5f5f5;
-    padding: 60px 97px 80px;
     display: flex;
     justify-content: space-between;
     flex-flow: row;
     flex-wrap: wrap;
-    width: 100%;
+    width: 60%;
+    margin-bottom: 10vh;
 }
 .input-container {
     width: 48%;
     position: relative;
-    margin-bottom: 18px;
+    margin-bottom: 1.25vw;
 }
 .input-container.full-width {
     width: 100%;
@@ -1414,11 +1450,15 @@ footer .contact-info p {
     background-color: transparent;
     outline: none;
     border: none;
-    border-bottom: 1px solid #d6d6d6;
-    line-height: 45px;
-    font-size: 20px;
-    color: #1d1d1d;
+    border-bottom: 0.07vw solid #fff;
+    line-height: 2.25;
+    font-size: 1.38vw;
+    color: #fff;
     transition: border-color 0.3s ease;
+    padding-top: 0.69vw;
+}
+.input-container input span {
+    color: #fff;
 }
 .input-container input:focus {
     outline: none;
@@ -1426,19 +1466,20 @@ footer .contact-info p {
 .input-container label {
     position: absolute;
     left: 0;
-    top: 10px;
-    font-size: 16px;
+    top: 0.69vw;
+    color: #fff;
+    font-size: 1.25vw;
     transition: font-size 0.3s ease-in, top 0.2s ease-in;
     cursor: text;
 }
 .input-container input:focus + label,
 .input-container textarea:focus + label {
-    font-size: 10px;
+    font-size: 0.69vw;
     top: 0;
 }
 .input-container input:not([value=""]):not(:focus) + label,
 .input-container textarea:not([value=""]):not(:focus) + label {
-    font-size: 10px;
+    font-size: 0.69vw;
     top: 0;
 }
 .input-container.empty input[name="name"],
@@ -1466,7 +1507,7 @@ footer .contact-info p {
     opacity: 1;
     color: red;
     position: absolute;
-    left: 10px;
+    left: 0.69vw;
 }
 input:-webkit-autofill,
 input:-webkit-autofill:hover, 
@@ -1474,13 +1515,22 @@ input:-webkit-autofill:focus,
 input:-webkit-autofill:active,
 input:-internal-autofill-selected,
 input:-internal-autofill-previewed {
-    background-color: #f5f5f5 !important;
-    -webkit-box-shadow: 0 0 0 30px #f5f5f5 inset !important;
+    background-color: #000 !important;
+    -webkit-box-shadow: 0 0 0 2.08vw #000 inset !important;
+    color: #fff;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: #ffffff;
+    box-shadow: inset 0 0 1.38vw 1.38vw #000;
 }
 .validation-message {
     line-height: 1;
-    padding: 5px 10px;
-    font-size: 14px;
+    padding: 0.35vw 0.69vw;
+    font-size: 0.97vw;
     position: relative;
 }
 .validation-message span {
@@ -1490,55 +1540,83 @@ input:-internal-autofill-previewed {
 textarea {
     resize: none;
     width: 100%;
-    height: 80px;
+    height: 5.55vw;
     background-color: transparent;
     border: none;
     outline: none;
-    margin-top: 20px;
-    font-size: 20px;
+    margin-top: 1.38vw;
+    color: #fff;
+    font-size: 1.38vw;
 }
 .email-sent {
     width: 100%;
     display: flex;
-    justify-content: center;
-    height: 30px;
+    height: 2.08vw;
     margin-bottom: 0;
     opacity: 0;
-    transition: height 2s ease,margin-bottom 2s ease;
+    transition: height 1s ease,margin-bottom 1s ease, opacity 2s ease;
 }
-.success .email-sent {
-    margin-bottom: 50px;
-    height: 20px;
+.sent .email-sent {
+    margin-bottom: 3.47vw;
+    height: 1.38vw;
     opacity: 1;
 }
 .email-sent p {
-    text-align: center;
+    font-size: 1.25vw;
+    display: none;
+}
+.sent .email-sent p.sent {
+    color: #fff;
+    display: block;
+}
+.failed .email-sent p.failed {
+    color: red;
+    display: block;
 }
 textarea:focus {
     outline: none;
 }
 .textarea-input {
-    background-color: #f5f5f5;
-    border-bottom: 1px solid #d6d6d6;
-    margin-bottom: 30px;
+    background-color: transparent;
+    border-bottom: 1px solid #fff;
+    margin-bottom: 2.08vw;
+    color: #fff;
     transition: border-color 0.3s ease;
 }
 .submit-button {
-    width: 220px;
-    height: 60px;
-    background-color: #1d1d1d;
-    font-size: 18px;
+    width: 15vw;
+    height: 4.16vw;
+    background: linear-gradient(113deg, #9BE545 0%, #0CF 100%);
+    font-size: 1.25vw;
     font-weight: bold;
     text-align: center;
     color: #fff;
-    margin: auto;
-    border: 2px solid #1d1d1d;
+    text-transform: uppercase;
+    border: 0.14vw solid #1d1d1d;
     box-shadow: inset 0 0 0px transparent;
     transition: box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 .submit-button:hover {
-    box-shadow: inset 0 60px 0px #f5f5f5;
+    box-shadow: inset 0 4.16vw 0px #f5f5f5;
     color: #1d1d1d;
+}
+.contact-info-container a {
+    color: #FFF;
+    font-size: 1.38vw;
+    font-weight: 500;
+    text-decoration: none;
+    margin-bottom: 5%;
+    display: block;
+}
+.contact-info-container p {
+    color: #9B9B9B;
+    font-size: 1.12vw;
+    font-weight: 500;
+    line-height: 142%;
+    margin-bottom: 10%;
+}
+.contact-info-container {
+    width: 25%;
 }
 
 @media screen and (max-width: 1280px) {
@@ -1576,7 +1654,8 @@ textarea:focus {
 
     .what-we-do-wrapper h1,
     .how-we-do-it-wrapper h1,
-    .about-us-wrapper h1 {
+    .about-us-wrapper h1,
+    .contact-form-wrapper h1 {
         font-size: 70px;
         margin-bottom: 64px;
     } 
@@ -1638,7 +1717,8 @@ textarea:focus {
     .second-nav .contact a {
         font-size: 22px;
     }
-    .second-nav .social-media a {
+    .second-nav .social-media a,
+    .contact-form-wrapper .social-media a {
         width: 22px;
         margin-right: 20px;
     }
@@ -1649,7 +1729,8 @@ textarea:focus {
         padding: 15vh 5vw 5vh 50%;
     }
     .second-nav .social-media,
-    .second-nav .contact {
+    .second-nav .contact,
+    .contact-form-wrapper .social-media  {
         margin-top: 30px;
     }
 
@@ -1813,6 +1894,101 @@ textarea:focus {
     }
     .process-description {
         width: 45%;
+    }
+    .contact-info-container a {
+        font-size: 20px;
+    }
+    .contact-info-container p {
+        font-size: 16px;
+    }
+    .input-container {
+        margin-bottom: 18px;
+    }
+    .input-container input {
+        border-bottom: 1px solid #fff;
+        line-height: 45px;
+        font-size: 20px;
+        padding-top: 10px;
+    }
+    .input-container label {
+        top: 10px;
+        font-size: 18px;
+    }
+    .input-container input:focus + label,
+    .input-container textarea:focus + label {
+        font-size: 10px;
+    }
+    .input-container input:not([value=""]):not(:focus) + label,
+    .input-container textarea:not([value=""]):not(:focus) + label {
+        font-size: 10px;
+    }
+    .input-container.wrong .validation-message span:last-of-type {
+        left: 10px;
+    }
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover, 
+    input:-webkit-autofill:focus, 
+    input:-webkit-autofill:active,
+    input:-internal-autofill-selected,
+    input:-internal-autofill-previewed {
+        -webkit-box-shadow: 0 0 0 30px #000 inset !important;
+    }
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover, 
+    input:-webkit-autofill:focus, 
+    input:-webkit-autofill:active{
+        box-shadow: inset 0 0 20px 20px #000;
+    }
+    .validation-message {
+        padding: 5px 10px;
+        font-size: 14px;
+    }
+    textarea {
+        height: 80px;
+        margin-top: 20px;
+        font-size: 20px;
+    }
+    .email-sent {
+        height: 30px;
+    }
+    .success .email-sent {
+        margin-bottom: 50px;
+        height: 20px;
+    }
+    .textarea-input {
+        border-bottom: 1px solid #fff;
+        margin-bottom: 30px;
+    }
+    .submit-button {
+        width: 220px;
+        height: 60px;
+        font-size: 18px;
+        border: 2px solid #1d1d1d;
+    }
+    .submit-button:hover {
+        box-shadow: inset 0 60px 0px #f5f5f5;
+    }
+    .email-sent p {
+        font-size: 18px;
+    }
+    
+    .hamby {
+        width: 44px;
+        padding: 10px;
+        height: 32px;
+    }
+    .hamby span {
+        top: 10px;
+        width: calc(100% - 20px);
+        right: 10px;
+        height: 3px;
+    }
+    
+    .hamby span:nth-of-type(2) {
+        bottom: 10px;
+    }
+    .hamby:hover span {
+        width: calc(100% - 20px);
     }
 }
 
@@ -1995,6 +2171,16 @@ textarea:focus {
     .process-container {
         align-items: flex-start;
     }
+    .contact-form-wrapper {
+        padding: 150px 50px 0;
+    }
+    .contact-form-wrapper form {
+        width: 100%;
+        margin-bottom: 100px;
+    }
+    .contact-info-container {
+        margin-bottom: 100px;
+    }
 }
 
 @media screen and (max-width: 680px) {
@@ -2152,6 +2338,12 @@ textarea:focus {
     .process-description h1 {
         font-size: 40px;
     }
+    .input-container {
+        width: 100%;
+    }
+    .email-sent p {
+        font-size: 16px;
+    }
 }
 
 @media screen and (max-width: 580px) {
@@ -2192,7 +2384,8 @@ textarea:focus {
     
     .what-we-do-wrapper h1,
     .how-we-do-it-wrapper h1,
-    .about-us-wrapper h1 {
+    .about-us-wrapper h1,
+    .contact-form-wrapper h1 {
         font-size: 12vw;
         margin-bottom: 50px;
     } 
@@ -2274,5 +2467,15 @@ textarea:focus {
     }
     .process-wrapper {
         padding: 100px 25px;
+    }
+    .contact-form-wrapper {
+        padding: 150px 25px 0;
+    }
+    .contact-form-wrapper form {
+        width: 100%;
+        margin-bottom: 100px;
+    }
+    .contact-info-container {
+        margin-bottom: 100px;
     }
 }

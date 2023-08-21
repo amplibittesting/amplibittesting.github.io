@@ -8,6 +8,26 @@
         <link rel="stylesheet" href="style.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.5.3/jquery.ripples.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+        <script type="text/javascript">
+            (function() {
+                emailjs.init('b-nPmBYkxmY0d08--');
+            })();
+        </script>
+        <script type="text/javascript">
+            window.onload = function() {
+                document.getElementById('contact-form').addEventListener('submit', function(event) {
+                    event.preventDefault();
+                    this.contact_number.value = Math.random() * 100000 | 0;
+                    emailjs.sendForm('service_3l31s7s', 'template_30n36vq', this)
+                        .then(function() {
+                            $(".contact-form-wrapper form").addClass("sent");
+                        }, function(error) {
+                            $(".contact-form-wrapper form").addClass("failed");
+                        });
+                });
+            }
+        </script>
         <script src="base.js"></script>
     </head>
     <body>
@@ -102,53 +122,75 @@
         <a href="/contact.html" class="contact-fixed">Let's talk</a>
 
         <div class="contact-form-wrapper">
-            <form>
+            <h1>Let's get in touch</h1>
+            <form id="contact-form">
+                <input type="hidden" name="contact_number">
                 <div class="input-container">
                     <input id="name" name="name" type="text" value="" onchange="this.setAttribute('value', this.value);">
                     <label for="name">
-                        <span>Your name*</span>
+                        <span>What is your name?</span>
                     </label>
                     <p class="validation-message"><span>This field is required</span><span>Name is not valid</span></p>
                 </div>
                 <div class="input-container">
                     <input id="email" name="email" type="text" value="" onchange="this.setAttribute('value', this.value);">
                     <label for="email">
-                        <span>Email address*</span>
+                        <span>Email address</span>
                     </label>
                     <p class="validation-message"><span>This field is required</span><span>Email is not valid</span></p>
-                </div>
-                <div class="input-container">
-                    <input id="phone" name="phone" type="text" value="" onchange="this.setAttribute('value', this.value);">
-                    <label for="phone">
-                        <span>Phone number</span>
-                    </label>
-                    <p class="validation-message"><span>This field is required</span><span>Please, provide phone number in (+)09112312312 format</span></p>
-                </div>
-                <div class="input-container non-required">
-                    <input id="company" name="company" type="text" value="" onchange="this.setAttribute('value', this.value);">
-                    <label for="company">
-                        <span>Company</span>
-                    </label>
-                </div>
-                <div class="input-container full-width">
-                    <input id="title" name="title" type="text" value="" onchange="this.setAttribute('value', this.value);">
-                    <label for="title">
-                        <span>Title*</span>
-                    </label>
-                    <p class="validation-message"><span>This field is required</span></p>
                 </div>
                 <div class="input-container full-width textarea-input">
                     <textarea id="message" name="message" type="text" value="" onchange="this.setAttribute('value', this.value);"></textarea>
                     <label for="message">
-                        <span>Message*</span>
+                        <span>How can we help?</span>
                     </label>
                     <p class="validation-message"><span>This field is required</span></p>
                 </div>
                 <div class="email-sent">
-                    <p>Thank you for contacting us! We'll get back to you as soon as possible!</p>
+                    <p class="sent">Thank you for contacting us! We'll get back to you as soon as possible!</p>
+                    <p class="failed">An error occured! Please try again.</p>
                 </div>
-                <button class="submit-button" type="button">Submit</button>
+                <button class="submit-button" type="button">Send</button>
             </form>
+            <div class="contact-info-container">
+                <a href="mailto:info@amplibit.com">info@amplibit.com</a>
+                <p>Have a project in mind?</p>
+                <a href="mailto:careers@amplibit.com">careers@amplibit.com</a>
+                <p>Jour our team. We are always,<br>looking for new talents.</p>
+                <div class="social-media">
+                    <h4>Follow us</h4>
+                    <div>
+                        <a href="/">
+                            <svg viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_183_2056)">
+                                <path d="M9.46718 7.07417C9.46718 7.42212 9.46718 8.88355 9.46718 8.88355H8.12305V11.1105H9.39997V17.7217H12.0882V11.1105H13.9028C13.9028 11.1105 14.1044 10.0666 14.1044 8.88355C13.9028 8.88355 12.0882 8.88355 12.0882 8.88355C12.0882 8.88355 12.0882 7.56131 12.0882 7.35253C12.0882 7.14376 12.3571 6.7958 12.6259 6.7958C12.8947 6.7958 13.4996 6.7958 14.1044 6.7958C14.1044 6.51743 14.1044 5.40397 14.1044 4.42969C13.3652 4.42969 12.4915 4.42969 12.1554 4.42969C9.39997 4.49928 9.46718 6.7958 9.46718 7.07417Z" fill="#fff"/>
+                                <path d="M11.0383 0C12.6481 0 14.1812 0.0766551 15.7909 0.0766551C16.7875 0.0766551 17.8606 0.30662 18.7805 0.76655C20.5436 1.68641 21.5401 3.0662 21.9233 4.98258C22.1533 6.1324 22.1533 7.28223 22.1533 8.43206C22.1533 10.5784 22.1533 12.7247 22.1533 14.8711C22.1533 15.8676 22.0767 16.9408 21.6934 17.9373C20.9268 20.007 19.4704 21.3101 17.324 21.77C16.6341 21.9233 15.9442 22 15.1777 22C12.4181 22 9.73519 22 6.97561 22C5.97909 22 4.98258 21.9233 3.98606 21.5401C1.99303 20.7735 0.689895 19.3171 0.30662 17.1707C0.076655 16.5575 0 15.7909 0 15.101C0 12.4181 0 9.73519 0 7.05226C0 6.05575 0.0766551 4.98258 0.45993 4.06272C1.22648 2.06969 2.68293 0.76655 4.82927 0.383275C5.59582 0.229965 6.36237 0.15331 7.12892 0.15331C8.43206 0.0766551 9.73519 0.0766551 11.0383 0ZM10.9617 20.0836C11.6516 20.0836 12.3415 20.0836 13.0314 20.0836C14.1812 20.0836 15.331 20.0836 16.4808 19.9303C18.3206 19.7003 19.6237 18.4739 19.8537 16.6341C20.007 15.7143 20.007 14.7944 20.007 13.9512C20.007 12.1882 20.007 10.5017 20.007 8.73868C20.007 7.6655 19.9303 6.66899 19.8537 5.59582C19.6237 3.7561 18.4739 2.45296 16.5575 2.14634C15.6376 1.99303 14.7178 1.99303 13.7979 1.91638C12.1882 1.91638 10.5784 1.91638 8.96864 1.91638C7.81881 1.91638 6.66899 1.91638 5.51916 2.06969C3.67944 2.37631 2.45296 3.60279 2.14634 5.44251C1.99303 6.36237 1.99303 7.20557 1.99303 8.12544C1.99303 9.96516 1.99303 11.8049 1.99303 13.6446C1.99303 14.6411 1.99303 15.7143 2.14634 16.7108C2.45296 18.3206 3.37282 19.3937 4.98258 19.8537C5.59582 20.007 6.28571 20.0836 6.89895 20.0836C8.27874 20.0836 9.65854 20.0836 10.9617 20.0836Z" fill="#fff"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_183_2056">
+                                <rect width="22.1533" height="22" fill="#fff"/>
+                                </clipPath>
+                                </defs>
+                            </svg> 
+                        </a>
+                        <a href="/">
+                            <svg viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_183_2052)">
+                                <path d="M11.0383 0C12.6481 0 14.1812 0.0766551 15.7909 0.0766551C16.7875 0.0766551 17.8606 0.30662 18.7805 0.76655C20.5436 1.68641 21.5401 3.0662 21.9233 4.98258C22.1533 6.1324 22.1533 7.28223 22.1533 8.43206C22.1533 10.5784 22.1533 12.7247 22.1533 14.8711C22.1533 15.8676 22.0767 16.9408 21.6934 17.9373C20.9268 20.007 19.4704 21.3101 17.324 21.77C16.6341 21.9233 15.9442 22 15.1777 22C12.4181 22 9.73519 22 6.97561 22C5.97909 22 4.98258 21.9233 3.98606 21.5401C1.99303 20.7735 0.689895 19.3171 0.30662 17.1707C0.076655 16.5575 0 15.7909 0 15.101C0 12.4181 0 9.73519 0 7.05226C0 6.05575 0.0766551 4.98258 0.45993 4.06272C1.22648 2.06969 2.68293 0.76655 4.82927 0.383275C5.59582 0.229965 6.36237 0.15331 7.12892 0.15331C8.43206 0.0766551 9.73519 0.0766551 11.0383 0ZM10.9617 20.0836C11.6516 20.0836 12.3415 20.0836 13.0314 20.0836C14.1812 20.0836 15.331 20.0836 16.4808 19.9303C18.3206 19.7003 19.6237 18.4739 19.8537 16.6341C20.007 15.7143 20.007 14.7944 20.007 13.9512C20.007 12.1882 20.007 10.5017 20.007 8.73868C20.007 7.6655 19.9303 6.66899 19.8537 5.59582C19.6237 3.7561 18.4739 2.45296 16.5575 2.14634C15.6376 1.99303 14.7178 1.99303 13.7979 1.91638C12.1882 1.91638 10.5784 1.91638 8.96864 1.91638C7.81881 1.91638 6.66899 1.91638 5.51916 2.06969C3.67944 2.37631 2.45296 3.60279 2.14634 5.44251C1.99303 6.36237 1.99303 7.20557 1.99303 8.12544C1.99303 9.96516 1.99303 11.8049 1.99303 13.6446C1.99303 14.6411 1.99303 15.7143 2.14634 16.7108C2.45296 18.3206 3.37282 19.3937 4.98258 19.8537C5.59582 20.007 6.28571 20.0836 6.89895 20.0836C8.27874 20.0836 9.65854 20.0836 10.9617 20.0836Z" fill="#fff"/>
+                                <path d="M11.0382 16.7102C7.89534 16.7102 5.36572 14.1806 5.36572 11.0377C5.36572 7.89485 7.89534 5.36523 11.0382 5.36523C14.1811 5.36523 16.7107 7.89485 16.7107 11.0377C16.634 14.1806 14.1044 16.7102 11.0382 16.7102ZM11.0382 14.7172C13.1079 14.7172 14.7176 13.1074 14.7176 11.0377C14.7176 9.04468 13.0312 7.35827 11.0382 7.35827C8.96851 7.35827 7.35875 8.96802 7.35875 11.0377C7.35875 13.1074 8.96851 14.7172 11.0382 14.7172Z" fill="#fff"/>
+                                <path d="M18.244 5.21196C18.244 5.97851 17.6307 6.5151 16.9408 6.5151C16.1743 6.5151 15.6377 5.90186 15.6377 5.21196C15.6377 4.44541 16.2509 3.90883 17.0175 3.90883C17.6307 3.83217 18.244 4.44541 18.244 5.21196Z" fill="#fff"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_183_2052">
+                                <rect width="22.1533" height="22" fill="white"/>
+                                </clipPath>
+                                </defs>
+                            </svg> 
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <img src="img/office-2.jpg" alt="Office">
         </div>
 
         <footer>
@@ -201,8 +243,8 @@
             </div>
         </footer>
         <script>document.addEventListener("DOMContentLoaded",function(){function d(){f.classList.add("hover")}function e(){f.classList.remove("hover")}var f=document.getElementById("cursor"),c=document.querySelector(".hamby"),b=document.querySelector(".logo"),g=document.querySelectorAll("a"),h=document.querySelectorAll(".single-process"),k=document.querySelectorAll(".process-icon");document.body.addEventListener("mousemove",function(l){f.style.left=l.clientX+"px";f.style.top=l.clientY+"px"});c.addEventListener("click",
-            function(){c.classList.contains("active")?(c.classList.remove("active"),document.body.classList.remove("navigationActive")):(c.classList.add("active"),document.body.classList.add("navigationActive"))});c.addEventListener("mouseenter",d);c.addEventListener("mouseleave",e);b.addEventListener("mouseenter",d);b.addEventListener("mouseleave",e);for(a=0;a<g.length;a++)g[a].addEventListener("mouseenter",d),g[a].addEventListener("mouseleave",e);for(b=0;b<h.length;b++)h[b].addEventListener("mouseenter",d),
-            h[b].addEventListener("mouseleave",e);for(b=0;b<k.length;b++)k[b].addEventListener("mouseenter",d),k[b].addEventListener("mouseleave",e)});</script>
+            function(){c.classList.contains("active")?(c.classList.remove("active"),document.body.classList.remove("navigationActive"),setTimeout(function(){c.classList.remove("ready")},1E3)):(c.classList.add("active"),document.body.classList.add("navigationActive"),setTimeout(function(){c.classList.add("ready")},1E3))});c.addEventListener("mouseenter",d);c.addEventListener("mouseleave",e);b.addEventListener("mouseenter",d);b.addEventListener("mouseleave",e);for(a=0;a<g.length;a++)g[a].addEventListener("mouseenter",
+            d),g[a].addEventListener("mouseleave",e);for(b=0;b<h.length;b++)h[b].addEventListener("mouseenter",d),h[b].addEventListener("mouseleave",e);for(b=0;b<k.length;b++)k[b].addEventListener("mouseenter",d),k[b].addEventListener("mouseleave",e)});</script>
         <script>
             $('input[name="name"]').keyup(function(){
             if($(this).val() == 0){
@@ -264,8 +306,11 @@
         });
 
         $(".submit-button").click(function(){
-            if($('input[name="email"]').parent().hasClass("success") && $('input[name="name"]').parent().hasClass("success") && $('input[name="phone"]').parent().hasClass("success") && $('textarea[name="message"]').val() != 0 && $('input[name="title"]').val() != 0){
+            if($('input[name="email"]').parent().hasClass("success") && $('input[name="name"]').parent().hasClass("success") && $('textarea[name="message"]').val() != 0){
                 $(".contact-form-wrapper form").addClass("success");
+                
+                document.getElementById("contact-form").requestSubmit();
+
                 $(".contact-form-wrapper form").removeClass("error");
             } else {
                 $(".contact-form-wrapper form").removeClass("success");
