@@ -564,14 +564,16 @@ header {
     font-weight: 600;
     line-height: 110%;
     margin-bottom: 8vh;
+}
+
+.what-we-do-wrapper h1,
+.contact-form-wrapper h1 {
     opacity: 0;
     position: relative;
     left: -10vw;
     transition: left 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 .what-we-do-wrapper h1.active,
-.how-we-do-it-wrapper h1.active,
-.about-us-wrapper h1.active,
 .contact-form-wrapper h1.active {
     opacity: 1;
     left: 0;
