@@ -435,10 +435,22 @@ header {
 }
 
 /**/
+.partners-title,
+.lets-talk {
+    opacity: 0;
+    position: relative;
+    bottom: -5vh;
+    transition: bottom 0.3s ease-in, opacity 0.3s ease-in;
+}
 .partners-title {
     font-weight: 600;
     margin-bottom: 15vh;
     font-size: 5.556vw;
+}
+.partners-title.active,
+.lets-talk.active {
+    bottom: 0;
+    opacity: 1;
 }
 .partners-wrapper {
     display: flex;
@@ -473,6 +485,28 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    opacity: 0;
+    position: relative;
+    bottom: -5vh;
+}
+.partners-container a:nth-of-type(1) {
+    transition: bottom 0.3s ease-in 0.1s, opacity 0.3s ease-in 0.1s;
+}
+.partners-container a:nth-of-type(2) {
+    transition: bottom 0.3s ease-in 0.2s, opacity 0.3s ease-in 0.2s;
+}
+.partners-container a:nth-of-type(3) {
+    transition: bottom 0.3s ease-in 0.3s, opacity 0.3s ease-in 0.3s;
+}
+.partners-container a:nth-of-type(4) {
+    transition: bottom 0.3s ease-in 0.4s, opacity 0.3s ease-in 0.4s;
+}
+.partners-container a:nth-of-type(5) {
+    transition: bottom 0.3s ease-in 0.5s, opacity 0.3s ease-in 0.5s;
+}
+.partners-container.active a {
+    opacity: 1;
+    bottom: 0;
 }
 .partners-container img {
     width: 100%;
@@ -485,7 +519,7 @@ header {
 }
 
 .lets-talk {
-    background: var(--linear, linear-gradient(113deg, #9BE545 0%, #0CF 100%)); 
+    background: linear-gradient(113deg, #9BE545 0%, #0CF 100%);
     color: #FFF;
     font-size: 1.12vw;
     font-weight: 800;
@@ -499,9 +533,11 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: inset 0 0 0px transparent;
+    transition: box-shadow 0.2s ease-in-out, color 0.2s ease-in-out, bottom 0.3s ease-in, opacity 0.3s ease-in;
 }
 .lets-talk:hover {
-    border-radius: 1.8vw;
+    box-shadow: inset 0 6vh 0px #000;
 }
 
 .what-we-do-wrapper,
@@ -528,6 +564,17 @@ header {
     font-weight: 600;
     line-height: 110%;
     margin-bottom: 8vh;
+    opacity: 0;
+    position: relative;
+    left: -10vw;
+    transition: left 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+.what-we-do-wrapper h1.active,
+.how-we-do-it-wrapper h1.active,
+.about-us-wrapper h1.active,
+.contact-form-wrapper h1.active {
+    opacity: 1;
+    left: 0;
 }
 
 .contact-form-wrapper h1 {
@@ -545,6 +592,22 @@ header {
 }
 .what-we-do-services div {
     width: 45%;
+    opacity: 0;
+    position: relative;
+    bottom: -5vh;
+    transition: bottom 0.3s ease-in, opacity 0.3s ease-in;
+}
+.what-we-do-services div:nth-of-type(2) {
+    bottom: 0;
+    top: -5vh;
+    transition: top 0.3s ease-in, opacity 0.3s ease-in;
+}
+.what-we-do-services.active div {
+    bottom: 0;
+    opacity: 1;
+}
+.what-we-do-services.active div:last-of-type {
+    top: 0;
 }
 
 .what-we-do-services h3,
@@ -1003,10 +1066,14 @@ footer {
     content: "";
     position: absolute;
     bottom: -1vh;
-    width: 100%;
+    width: 0;
     height: 4px;
     left: 0;
     background-image: linear-gradient(113deg, #9BE545 0%, #0CF 100%);
+    transition: width 0.3s ease 0.3s;
+}
+.tell-us-about-it.active a::after {
+    width: 100%;
 }
 .amplibit-team-wrapper {
     width: 100%;
@@ -1019,6 +1086,14 @@ footer {
     font-weight: 500;
     line-height: 100%;
     padding: 0 6.94vw 5vh;
+    opacity: 0;
+    position: relative;
+    left: -5vw;
+    transition: left 0.3s ease-in, opacity 0.3s ease-in;
+}
+.amplibit-team-wrapper > h1.active {
+    opacity: 1;
+    left: 0;
 }
 .amplibit-team-wrapper > p {
     color: #000;
@@ -1592,13 +1667,13 @@ textarea:focus {
     text-align: center;
     color: #fff;
     text-transform: uppercase;
-    border: 0.14vw solid #1d1d1d;
+    border: 0.14vw solid #000;
     box-shadow: inset 0 0 0px transparent;
     transition: box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 .submit-button:hover {
-    box-shadow: inset 0 4.16vw 0px #f5f5f5;
-    color: #1d1d1d;
+    box-shadow: inset 0 4.16vw 0px #fff;
+    color: #000;
 }
 .contact-info-container a {
     color: #FFF;
