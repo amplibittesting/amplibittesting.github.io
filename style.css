@@ -823,6 +823,58 @@ body.blue.green-back-only {
     font-weight: 500;
     text-align: center;
 }
+.product-icon p{
+    opacity: 1;
+}
+.product-icons > div:nth-of-type(1) .product-icon p {
+    transition: opacity 0.3s ease;
+}
+.product-icons > div:nth-of-type(2) .product-icon p{
+    transition: opacity 0.3s ease 0.5s;
+}
+.product-icons > div:nth-of-type(3) .product-icon p{
+    transition: opacity 0.3s ease 1s;
+}
+.product-icons > div:nth-of-type(4) .product-icon p{
+    transition: opacity 0.3s ease 1.5s;
+}
+
+.single-service-wrapper.active .product-icon p {
+    opacity: 0;
+}
+.product-icon {
+    position: relative;
+}
+.product-icon svg {
+    width: 100%;
+    height: 100%;
+    max-width: 30%;
+    max-height: 30%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+.product-icons > div:nth-of-type(3) svg {
+    max-width: 40%;
+}
+.single-service-wrapper.active .product-icon svg {
+    opacity: 1;
+}
+
+.product-icons > div:nth-of-type(1) svg {
+    transition: opacity 0.3s ease;
+}
+.product-icons > div:nth-of-type(2) svg {
+    transition: opacity 0.3s ease 0.5s;
+}
+.product-icons > div:nth-of-type(3) svg {
+    transition: opacity 0.3s ease 1s;
+}
+.product-icons > div:nth-of-type(4) svg {
+    transition: opacity 0.3s ease 1.5s;
+}
 .product-icons {
     display: flex;
     align-items: flex-start;
@@ -863,10 +915,25 @@ body.blue.green-back-only {
     content: "";
     position: absolute;
     border-top: 0.14vw dashed #fff;
-    top: 4.16vw;
+    opacity: 0.7;
     width: calc(100% - 13.88vw);
     left: 6.94vw;
     top: 8.33vw;
+}
+.product-icons::after {
+    content: "";
+    position: absolute;
+    border-top: 0.2vw solid #fff;
+    width: 0;
+    left: 6.94vw;
+    top: 8.3vw;
+    transition: width 1.5s linear;
+}
+#ProductCatalog.active .product-icons::after {
+    width: calc(100% - 13.88vw);
+}
+#Arrango.active .product-icons::after {
+    width: calc(100% - 13.88vw);
 }
 
 .process-wrapper {
@@ -2236,7 +2303,8 @@ footer .text-hello span:nth-of-type(even),
         width: 45%;
         margin-top: 60px;
     }
-    .product-icons::before {
+    .product-icons::before,
+    .product-icons::after {
         content: none;
     }
     .product-icon p,
