@@ -381,6 +381,12 @@ header {
     right: 0;
     opacity: 1;
 }
+.navigationActive header .logo path {
+    fill: #fff;
+}
+.blue.navigationActive header .hamby span {
+    background-color: #000;
+}
 
 .second-nav h4 {
     color: #767676;
@@ -568,16 +574,34 @@ header {
 }
 
 .what-we-do-wrapper h1,
+.contact-form-wrapper h1,
+.about-us-wrapper h1,
+.how-we-do-it-wrapper h1,
 .contact-form-wrapper h1 {
     opacity: 0;
     position: relative;
     left: -10vw;
     transition: left 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
+.about-us-wrapper p,
+.how-we-do-it-wrapper p {
+    opacity: 0;
+    position: relative;
+    right: -10vw;
+    transition: right 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
 .what-we-do-wrapper h1.active,
-.contact-form-wrapper h1.active {
+.contact-form-wrapper h1.active,
+.about-us-wrapper.active h1,
+.how-we-do-it-wrapper.active h1,
+.contact-form-wrapper.active h1 {
     opacity: 1;
     left: 0;
+}
+.about-us-wrapper.active p,
+.how-we-do-it-wrapper.active p {
+    opacity: 1;
+    right: 0;
 }
 
 .contact-form-wrapper h1 {
@@ -902,6 +926,9 @@ body.blue.green-back-only {
     font-weight: 500; 
     margin-bottom: 1.042vw;
 }
+.single-process h2 span {
+    display: none
+}
 .single-process p {
     color: #000;
     font-size: 1.25vw;
@@ -972,11 +999,15 @@ body.blue.green-back-only {
 }
 
 .careers-container h2,
-.careers-container a {
+.careers-container p.careers-hello {
     color: #000;
     font-size: 2.64vw;
     font-weight: 500;
     line-height: 110%;
+}
+.careers-container p.careers-hello {
+    text-decoration: underline;
+    display: inline;
 }
 .careers-container h2 {
     margin-bottom: 100px;
@@ -1020,7 +1051,7 @@ body.blue.green-back-only {
 .career-description ul {
     padding-left: 20px;
 }
-.careers-container a.career-contact {
+.careers-container p.career-contact {
     display: flex;
     color: #FFF;
     font-size: 14px;
@@ -1035,11 +1066,11 @@ body.blue.green-back-only {
     background-image: linear-gradient(113deg, #9BE545 0%, #0CF 100%);
     transition: border-radius 0.5s ease;
 }
-.careers-container a.career-contact:hover {
-    border-radius: 0;
+.careers-container p.career-contact span:nth-of-type(even) {
+    display: none;
 }
-.career-contact svg {
-    margin-left: 10px;
+.careers-container p.career-contact:hover {
+    border-radius: 0;
 }
 footer {
     background-color: #000;
@@ -1230,8 +1261,11 @@ footer {
     font-weight: 500;
     line-height: 158.5%; 
 }
+.join-us p span:nth-of-type(even) {
+    display: none;
+}
 
-footer .mail {
+footer .contact-info p.text-hello {
     display: block;
     color: #FFF;
     font-size: 1.52vw;
@@ -1244,7 +1278,7 @@ footer .contact-info p {
     font-size: 1.112vw;
     font-weight: 500;
     line-height: 142%;
-    letter-spacing: 1%;
+
 }
 .social-icon {
     text-decoration: none;
@@ -1679,7 +1713,7 @@ textarea:focus {
     box-shadow: inset 0 4.16vw 0px #fff;
     color: #000;
 }
-.contact-info-container a {
+.contact-info-container p.text-hello {
     color: #FFF;
     font-size: 1.38vw;
     font-weight: 500;
@@ -1697,7 +1731,10 @@ textarea:focus {
 .contact-info-container {
     width: 25%;
 }
-.contact-text span:nth-of-type(even) {
+.contact-text span:nth-of-type(even),
+footer .text-hello span:nth-of-type(even),
+.contact-info-container p.text-hello span:nth-of-type(even),
+.careers-container p.careers-hello span:nth-of-type(even) {
     display: none;
 }
 
@@ -1755,7 +1792,7 @@ textarea:focus {
     .tell-us-about-it a::after {
         bottom: -10px;
     }
-    footer .mail {
+    footer .contact-info p.text-hello {
         font-size: 22px;
     }
     
@@ -1842,7 +1879,7 @@ textarea:focus {
         margin: auto;
     }
     .careers-container h2,
-    .careers-container a {
+    .careers-container p.careers-hello {
         font-size: 38px;
     }
     .careers-wrapper {
@@ -1868,7 +1905,7 @@ textarea:focus {
     .contact-fixed {
         font-size: 12px;
         bottom: 45px;
-        right: 5vw;
+        right: calc(5vw + 10px);
         letter-spacing: 0.96px;
         padding-top: 35px;
     }
@@ -1973,7 +2010,7 @@ textarea:focus {
     .process-description {
         width: 45%;
     }
-    .contact-info-container a {
+    .contact-info-container p.text-hello {
         font-size: 20px;
     }
     .contact-info-container p {
@@ -2229,6 +2266,7 @@ textarea:focus {
         font-size: 20px;
         margin-right: 20px;
         font-weight: 500;
+        display: block;
     }
     .single-process h2::after {
         content: "";
@@ -2258,6 +2296,7 @@ textarea:focus {
     }
     .contact-info-container {
         margin-bottom: 100px;
+        width: 100%;
     }
     .what-we-do-title.active + .what-we-do-services div {
         bottom: 0;
@@ -2265,6 +2304,9 @@ textarea:focus {
     }
     .what-we-do-title.active + .what-we-do-services div:last-of-type {
         top: 0;
+    }
+    .contact-info-container p {
+        margin-bottom: 50px;
     }
 }
 
@@ -2386,14 +2428,14 @@ textarea:focus {
     .partners-wrapper.gray-background {
         background-color: #fff;
     }
-    .careers-container a.career-contact {
+    .careers-container p.career-contact {
         margin-left: 0;
     }
     .careers-container h2 {
         padding: 0 25px;
         font-size: 24px;
     }
-    .careers-container a {
+    .careers-container p.careers-hello {
         font-size: 24px;
     }
     .product-details {
@@ -2433,6 +2475,9 @@ textarea:focus {
 
 @media screen and (max-width: 580px) {
     
+    .navigationActive header .logo path {
+        fill: #000;
+    }
     .logo {
         width: 130px;
     }
@@ -2452,7 +2497,7 @@ textarea:focus {
     .partners-container a {
         width: 100%;
         max-height: 30px;
-        margin-bottom: 60px;
+        margin-bottom: 70px;
     }
 
     .partners-container img {
@@ -2487,7 +2532,7 @@ textarea:focus {
     .tell-us-about-it a {
         font-size: 40px;
     }
-    footer .mail {
+    footer .contact-info p.text-hello {
         font-size: 20px;
     }
     

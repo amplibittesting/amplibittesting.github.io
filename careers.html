@@ -3,6 +3,7 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Amplibit is a software development company based in Zagreb, Croatia. Amplify your potential with our tailor-made solutions and solution drive team.">
+        <meta name="format-detection" content="telephone=no">
         <title>Amplibit - Careers</title>
         <link rel="icon" type="image/x-icon" href="/favicon.ico">
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,13 +22,12 @@
             >
         </noscript>
         <link rel="stylesheet" href="style.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.slim.min.js" defer></script>
     </head>
     <body>
         <div class='cursor' id="cursor"></div>
 
         <div class="overlay-wrapper">
-            <img src="img/office.jpg" alt="navigation image">
+            <img src="img/office.jpg" alt="navigation image" loading="lazy">
             <div class="overlay-navigation">
                 <div class="main-nav">
                     <a href="/about-us">About us</a>
@@ -39,12 +39,12 @@
                 <div class="second-nav">
                     <div class="contact">
                         <h4>Get in touch</h4>
-                        <a href="mailto:info@amplibit.com">info@amplibit.com</a>
+                        <p class="contact-text"><span>i</span><span>d</span><span>n</span><span>@</span><span>f</span><span>&#x40;</span><span>o</span><span>o</span><span>&#x40;</span><span>c</span><span>a</span><span>c</span><span>m</span><span>o</span><span>p</span><span>t</span><span>l</span><span>a</span><span>i</span><span>c</span><span>b</span><span>t</span><span>i</span><span>@</span><span>t</span><span>c</span><span>.</span><span>d</span><span>c</span><span>r</span><span>o</span><span>n</span><span>m</span></p>
                     </div>
                     <div class="social-media">
                         <h4>Follow us</h4>
                         <div>
-                            <a href="https://www.facebook.com/">
+                            <a href="https://www.facebook.com/" aria-label="Social media link">
                                 <svg viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g clip-path="url(#clip0_183_2056)">
                                     <path d="M9.46718 7.07417C9.46718 7.42212 9.46718 8.88355 9.46718 8.88355H8.12305V11.1105H9.39997V17.7217H12.0882V11.1105H13.9028C13.9028 11.1105 14.1044 10.0666 14.1044 8.88355C13.9028 8.88355 12.0882 8.88355 12.0882 8.88355C12.0882 8.88355 12.0882 7.56131 12.0882 7.35253C12.0882 7.14376 12.3571 6.7958 12.6259 6.7958C12.8947 6.7958 13.4996 6.7958 14.1044 6.7958C14.1044 6.51743 14.1044 5.40397 14.1044 4.42969C13.3652 4.42969 12.4915 4.42969 12.1554 4.42969C9.39997 4.49928 9.46718 6.7958 9.46718 7.07417Z" fill="black"/>
@@ -57,7 +57,7 @@
                                     </defs>
                                 </svg> 
                             </a>
-                            <a href="https://www.facebook.com/">
+                            <a href="https://www.facebook.com/" aria-label="Social media link">
                                 <svg viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g clip-path="url(#clip0_183_2052)">
                                     <path d="M11.0383 0C12.6481 0 14.1812 0.0766551 15.7909 0.0766551C16.7875 0.0766551 17.8606 0.30662 18.7805 0.76655C20.5436 1.68641 21.5401 3.0662 21.9233 4.98258C22.1533 6.1324 22.1533 7.28223 22.1533 8.43206C22.1533 10.5784 22.1533 12.7247 22.1533 14.8711C22.1533 15.8676 22.0767 16.9408 21.6934 17.9373C20.9268 20.007 19.4704 21.3101 17.324 21.77C16.6341 21.9233 15.9442 22 15.1777 22C12.4181 22 9.73519 22 6.97561 22C5.97909 22 4.98258 21.9233 3.98606 21.5401C1.99303 20.7735 0.689895 19.3171 0.30662 17.1707C0.076655 16.5575 0 15.7909 0 15.101C0 12.4181 0 9.73519 0 7.05226C0 6.05575 0.0766551 4.98258 0.45993 4.06272C1.22648 2.06969 2.68293 0.76655 4.82927 0.383275C5.59582 0.229965 6.36237 0.15331 7.12892 0.15331C8.43206 0.0766551 9.73519 0.0766551 11.0383 0ZM10.9617 20.0836C11.6516 20.0836 12.3415 20.0836 13.0314 20.0836C14.1812 20.0836 15.331 20.0836 16.4808 19.9303C18.3206 19.7003 19.6237 18.4739 19.8537 16.6341C20.007 15.7143 20.007 14.7944 20.007 13.9512C20.007 12.1882 20.007 10.5017 20.007 8.73868C20.007 7.6655 19.9303 6.66899 19.8537 5.59582C19.6237 3.7561 18.4739 2.45296 16.5575 2.14634C15.6376 1.99303 14.7178 1.99303 13.7979 1.91638C12.1882 1.91638 10.5784 1.91638 8.96864 1.91638C7.81881 1.91638 6.66899 1.91638 5.51916 2.06969C3.67944 2.37631 2.45296 3.60279 2.14634 5.44251C1.99303 6.36237 1.99303 7.20557 1.99303 8.12544C1.99303 9.96516 1.99303 11.8049 1.99303 13.6446C1.99303 14.6411 1.99303 15.7143 2.14634 16.7108C2.45296 18.3206 3.37282 19.3937 4.98258 19.8537C5.59582 20.007 6.28571 20.0836 6.89895 20.0836C8.27874 20.0836 9.65854 20.0836 10.9617 20.0836Z" fill="black"/>
@@ -71,7 +71,7 @@
                                     </defs>
                                 </svg> 
                             </a>
-                            <a href="https://www.facebook.com/">
+                            <a href="https://www.facebook.com/" aria-label="Social media link">
                                 <svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M10.9619 0C12.5606 0 14.083 0.0766551 15.6817 0.0766551C16.6713 0.0766551 17.737 0.30662 18.6505 0.76655C20.4014 1.68641 21.391 3.0662 21.7716 4.98258C22 6.1324 22 7.28223 22 8.43206C22 10.5784 22 12.7247 22 14.8711C22 15.8676 21.9239 16.9408 21.5433 17.9373C20.782 20.007 19.3356 21.3101 17.2042 21.77C16.519 21.9233 15.8339 22 15.0727 22C12.3322 22 9.66782 22 6.92734 22C5.93772 22 4.9481 21.9233 3.95848 21.5401C1.97924 20.7735 0.685121 19.3171 0.304498 17.1707C0.0761246 16.5575 0 15.7909 0 15.101C0 12.4181 0 9.73519 0 7.05226C0 6.05575 0.0761246 4.98258 0.456747 4.06272C1.21799 2.06969 2.66436 0.76655 4.79585 0.383275C5.55709 0.229965 6.31834 0.15331 7.07959 0.15331C8.3737 0.0766551 9.66782 0.0766551 10.9619 0ZM10.8858 20.0836C11.5709 20.0836 12.2561 20.0836 12.9412 20.0836C14.083 20.0836 15.2249 20.0836 16.3668 19.9303C18.1938 19.7003 19.4879 18.4739 19.7163 16.6341C19.8685 15.7143 19.8685 14.7944 19.8685 13.9512C19.8685 12.1882 19.8685 10.5017 19.8685 8.73868C19.8685 7.6655 19.7924 6.66899 19.7163 5.59582C19.4879 3.7561 18.346 2.45296 16.4429 2.14634C15.5294 1.99303 14.6159 1.99303 13.7024 1.91638C12.1038 1.91638 10.5052 1.91638 8.90657 1.91638C7.76471 1.91638 6.62284 1.91638 5.48097 2.06969C3.65398 2.37631 2.43599 3.60279 2.13149 5.44251C1.97924 6.36237 1.97924 7.20557 1.97924 8.12544C1.97924 9.96516 1.97924 11.8049 1.97924 13.6446C1.97924 14.6411 1.97924 15.7143 2.13149 16.7108C2.43599 18.3206 3.34948 19.3937 4.9481 19.8537C5.55709 20.007 6.24221 20.0836 6.85121 20.0836C8.22145 20.0836 9.5917 20.0836 10.8858 20.0836Z" fill="black"/>
                                 </svg> 
@@ -83,7 +83,7 @@
         </div>
 
         <header>
-            <a href="/" class="logo">
+            <a href="/" class="logo" aria-label="Logo">
                 <svg viewBox="0 0 160 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_13_860)">
                       <path d="M67.99 22.3788V7.93515H70.7032V9.83981C71.581 8.25259 73.4164 7.45898 75.0922 7.45898C76.9276 7.45898 78.6833 8.33195 79.4813 10.2366C80.5985 8.17323 82.5137 7.45898 84.3491 7.45898C86.9027 7.45898 89.3765 9.20492 89.3765 13.0142V22.4582H86.5835V13.3317C86.5835 11.427 85.6259 9.99853 83.4713 9.99853C81.4763 9.99853 80.1197 11.5857 80.1197 13.6491V22.4582H77.2469V13.3317C77.2469 11.427 76.369 9.99853 74.1346 9.99853C72.1396 9.99853 70.7032 11.5064 70.7032 13.6491V22.3788H67.99Z" fill="white"/>
@@ -116,7 +116,7 @@
 
         <div class="how-we-do-it-wrapper">
             <h1>Join our team!</h1>
-            <p>As our business grows, we need our team to grow too. If any of our job openings catches your eye, please <a href="mailto:info@amplibit.com">send us an email</a>. If you couldn’t find a suitable position/role that would meet with your background, experience and career aspirations, please send us an open application.</p>
+            <p>As our business grows, so do we.<br>If any of our job openings catches your eye, please <b>send us an email</b>. If you couldn’t find a suitable position/role that would meet with your background, experience and career aspirations, please send us an open application.</p>
         </div>
 
         <img class="full-width-image" src="img/office.jpg" alt="Our office">
@@ -125,7 +125,7 @@
             <div class="careers-container">
                 <h2>Ready to amp up our team?<br>
                     Check the career list below and send<br>
-                    us an email <a href="mailto:careers@amplibit.com">careers@amplibit.com</a></h2>
+                    us an email <p class="careers-hello"><span>c</span><span>d</span><span>a</span><span>@</span><span>r</span><span>&#x40;</span><span>e</span><span>o</span><span>e</span><span>c</span><span>r</span><span>s</span><span>s</span><span>&#x40;</span><span>&#x40;</span><span>c</span><span>a</span><span>c</span><span>m</span><span>o</span><span>p</span><span>t</span><span>l</span><span>a</span><span>i</span><span>c</span><span>b</span><span>t</span><span>i</span><span>@</span><span>t</span><span>c</span><span>.</span><span>d</span><span>c</span><span>r</span><span>o</span><span>n</span><span>m</span></p></h2>
                 <div class="career-openings">
                     <div class="career-opening active">
                         <h3>Frontend developer</h3>
@@ -149,7 +149,6 @@
                             <div>
                                 <h4>Good to know</h4>
                                 <div>
-                                    <p>Zagreb, Croatia</p>
                                     <ul>
                                         <li>SCSS, SASS</li>
                                         <li>Nginx, Apache httpd (or something else for application deployment)</li>
@@ -165,22 +164,11 @@
                                     </ul>
                                 </div>
                             </div>
-                            <a href="mailto:careers@amplibit.com" class="career-contact">careers@amplibit.com
-                                <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <g clip-path="url(#clip0_266_327)">
-                                        <path d="M0 6.18568H14.9123L10.3582 1.62267L11.5003 0.483095L18 7.00505L11.5003 13.5176L10.3582 12.378L14.9123 7.81499H0V6.18568Z" fill="white"/>
-                                    </g>
-                                    <defs>
-                                        <clipPath id="clip0_266_327">
-                                            <rect width="18" height="13.0345" fill="white" transform="matrix(1 0 0 -1 0 13.5176)"/>
-                                        </clipPath>
-                                    </defs>
-                                </svg>
-                            </a>
+                            <p class="career-contact"><span>c</span><span>d</span><span>a</span><span>@</span><span>r</span><span>&#x40;</span><span>e</span><span>o</span><span>e</span><span>c</span><span>r</span><span>s</span><span>s</span><span>&#x40;</span><span>&#x40;</span><span>c</span><span>a</span><span>c</span><span>m</span><span>o</span><span>p</span><span>t</span><span>l</span><span>a</span><span>i</span><span>c</span><span>b</span><span>t</span><span>i</span><span>@</span><span>t</span><span>c</span><span>.</span><span>d</span><span>c</span><span>r</span><span>o</span><span>n</span><span>m</span></p>
                         </div>
                     </div>
                     <div class="career-opening">
-                        <h3>Frontend developer</h3>
+                        <h3>Backend developer</h3>
                         <div class="career-description">
                             <div>
                                 <h4>Location</h4>
@@ -191,21 +179,19 @@
                             <div>
                                 <h4>Qualifications</h4>
                                 <div>
-                                    <p>1+ year of experience in working with:</p>
+                                    <p>3+ years of experience in working with:</p>
                                     <ul>
-                                        <li>HTML, CSS, JavaScript, TS</li>
-                                        <li>Angular 2 (and accompanying build environment)</li>
+                                        <li>Java, Spring Boot</li>
+                                        <li>SQL, JPA, Hibernate</li>
                                     </ul>
                                 </div>
                             </div>
                             <div>
                                 <h4>Good to know</h4>
                                 <div>
-                                    <p>Zagreb, Croatia</p>
                                     <ul>
-                                        <li>SCSS, SASS</li>
-                                        <li>Nginx, Apache httpd (or something else for application deployment)</li>
-                                        <li>Docker</li>
+                                        <li>Spring Cloud, Microservice architecture</li>
+                                        <li>Docker, Docker-Compose</li>
                                     </ul>
                                 </div>
                             </div>
@@ -217,10 +203,11 @@
                                     </ul>
                                 </div>
                             </div>
+                            <p class="career-contact"><span>c</span><span>d</span><span>a</span><span>@</span><span>r</span><span>&#x40;</span><span>e</span><span>o</span><span>e</span><span>c</span><span>r</span><span>s</span><span>s</span><span>&#x40;</span><span>&#x40;</span><span>c</span><span>a</span><span>c</span><span>m</span><span>o</span><span>p</span><span>t</span><span>l</span><span>a</span><span>i</span><span>c</span><span>b</span><span>t</span><span>i</span><span>@</span><span>t</span><span>c</span><span>.</span><span>d</span><span>c</span><span>r</span><span>o</span><span>n</span><span>m</span></p>
                         </div>
                     </div>
                     <div class="career-opening">
-                        <h3>Frontend developer</h3>
+                        <h3>Cloud native developer</h3>
                         <div class="career-description">
                             <div>
                                 <h4>Location</h4>
@@ -229,23 +216,27 @@
                                 </div>
                             </div>
                             <div>
-                                <h4>Qualifications</h4>
+                                <h4>Must-have</h4>
                                 <div>
-                                    <p>1+ year of experience in working with:</p>
                                     <ul>
-                                        <li>HTML, CSS, JavaScript, TS</li>
-                                        <li>Angular 2 (and accompanying build environment)</li>
+                                        <li>Background in development and/or operations</li>
+                                        <li>An understanding of best practices and patterns in software development </li>
+                                        <li>Experience with CI/CD (knowledge of the principles and ability to set up a pipeline from scratch)</li>
+                                        <li>Infrastructure provisioning (such as Cloud Formation, Terraform, Ansible, etc)</li>
+                                        <li>Experience in either public or private cloud</li>
+                                        <li>Understanding and exposure to Kubernetes</li>
                                     </ul>
                                 </div>
                             </div>
                             <div>
-                                <h4>Good to know</h4>
+                                <h4>Nice-to-have</h4>
                                 <div>
-                                    <p>Zagreb, Croatia</p>
+                                    <p>We offer engineering roles at different levels of seniority. These are some attributes that could make you a candidate for more senior positions:</p>
                                     <ul>
-                                        <li>SCSS, SASS</li>
-                                        <li>Nginx, Apache httpd (or something else for application deployment)</li>
-                                        <li>Docker</li>
+                                        <li>A deep and demonstrated understanding of distributed systems, including containerised microservices and highly scalable web applications</li>
+                                        <li>Advanced (admin-level) knowledge of Kubernetes in production</li>
+                                        <li>Required qualifications to be familiar within this role include configuration and maintenance of Amazon Virtual Private Cloud (VPC) resources (e.g. subnets security groups, permissions policies, etc.). Also well versed in the configuration of EC2, Fargate, SQS, RDS, API Gateway.</li>
+                                        <li>Leverage AWS capabilities (scalability, elasticity, and high availability) to assist in transition from a physical to virtual architecture.</li>
                                     </ul>
                                 </div>
                             </div>
@@ -253,10 +244,11 @@
                                 <h4>Soft skills</h4>
                                 <div>
                                     <ul>
-                                        <li>Agile programming approach, teamwork</li>
+                                        <li>Coaching and mentoring junior engineers</li>
                                     </ul>
                                 </div>
                             </div>
+                            <p class="career-contact"><span>c</span><span>d</span><span>a</span><span>@</span><span>r</span><span>&#x40;</span><span>e</span><span>o</span><span>e</span><span>c</span><span>r</span><span>s</span><span>s</span><span>&#x40;</span><span>&#x40;</span><span>c</span><span>a</span><span>c</span><span>m</span><span>o</span><span>p</span><span>t</span><span>l</span><span>a</span><span>i</span><span>c</span><span>b</span><span>t</span><span>i</span><span>@</span><span>t</span><span>c</span><span>.</span><span>d</span><span>c</span><span>r</span><span>o</span><span>n</span><span>m</span></p>
                         </div>
                     </div>
                 </div>
@@ -296,10 +288,10 @@
                 <a href="/contact">Tell us about it</a>
             </div>
             <div class="contact-info">
-                <a href="mailto:info@amplibit.com" class="mail">info@amplibit.com</a>
+                <p class="text-hello"><span>i</span><span>d</span><span>n</span><span>@</span><span>f</span><span>&#x40;</span><span>o</span><span>o</span><span>&#x40;</span><span>c</span><span>a</span><span>c</span><span>m</span><span>o</span><span>p</span><span>t</span><span>l</span><span>a</span><span>i</span><span>c</span><span>b</span><span>t</span><span>i</span><span>@</span><span>t</span><span>c</span><span>.</span><span>d</span><span>c</span><span>r</span><span>o</span><span>n</span><span>m</span></p>
                 <p>+385 1 2096 296</p>
                 <p>Garićgradska 18, Zagreb, Croatia</p>
-                <a href="https://www.facebook.com/" class="social-icon">
+                <a href="https://www.facebook.com/" class="social-icon" aria-label="Social media link">
                     <svg viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_85_1663)">
                         <path d="M9.467 7.07514C9.467 7.4231 9.467 8.88452 9.467 8.88452H8.12286V11.1115H9.39979V17.7226H12.0881V11.1115H13.9026C13.9026 11.1115 14.1043 10.0676 14.1043 8.88452C13.9026 8.88452 12.0881 8.88452 12.0881 8.88452C12.0881 8.88452 12.0881 7.56228 12.0881 7.35351C12.0881 7.14473 12.3569 6.79678 12.6257 6.79678C12.8945 6.79678 13.4994 6.79678 14.1043 6.79678C14.1043 6.51841 14.1043 5.40495 14.1043 4.43066C13.365 4.43066 12.4913 4.43066 12.1553 4.43066C9.39979 4.50026 9.467 6.79678 9.467 7.07514Z" fill="white"/>
@@ -312,17 +304,17 @@
                         </defs>
                     </svg>                        
                 </a>
-                <a href="https://www.facebook.com/" class="social-icon">
+                <a href="https://www.facebook.com/" class="social-icon" aria-label="Social media link">
                     <svg viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_85_1659)">
-                        <path d="M11.0383 0C12.6481 0 14.1812 0.0766551 15.7909 0.0766551C16.7875 0.0766551 17.8606 0.30662 18.7805 0.76655C20.5436 1.68641 21.5401 3.0662 21.9233 4.98258C22.1533 6.1324 22.1533 7.28223 22.1533 8.43206C22.1533 10.5784 22.1533 12.7247 22.1533 14.8711C22.1533 15.8676 22.0767 16.9408 21.6934 17.9373C20.9268 20.007 19.4704 21.3101 17.324 21.77C16.6341 21.9233 15.9442 22 15.1777 22C12.4181 22 9.73519 22 6.97561 22C5.97909 22 4.98258 21.9233 3.98606 21.5401C1.99303 20.7735 0.689895 19.3171 0.30662 17.1707C0.076655 16.5575 0 15.7909 0 15.101C0 12.4181 0 9.73519 0 7.05226C0 6.05575 0.0766551 4.98258 0.45993 4.06272C1.22648 2.06969 2.68293 0.76655 4.82927 0.383275C5.59582 0.229965 6.36237 0.15331 7.12892 0.15331C8.43206 0.0766551 9.73519 0.0766551 11.0383 0ZM10.9617 20.0836C11.6516 20.0836 12.3415 20.0836 13.0314 20.0836C14.1812 20.0836 15.331 20.0836 16.4808 19.9303C18.3206 19.7003 19.6237 18.4739 19.8537 16.6341C20.007 15.7143 20.007 14.7944 20.007 13.9512C20.007 12.1882 20.007 10.5017 20.007 8.73868C20.007 7.6655 19.9303 6.66899 19.8537 5.59582C19.6237 3.7561 18.4739 2.45296 16.5575 2.14634C15.6376 1.99303 14.7178 1.99303 13.7979 1.91638C12.1882 1.91638 10.5784 1.91638 8.96864 1.91638C7.81881 1.91638 6.66899 1.91638 5.51916 2.06969C3.67944 2.37631 2.45296 3.60279 2.14634 5.44251C1.99303 6.36237 1.99303 7.20557 1.99303 8.12544C1.99303 9.96516 1.99303 11.8049 1.99303 13.6446C1.99303 14.6411 1.99303 15.7143 2.14634 16.7108C2.45296 18.3206 3.37282 19.3937 4.98258 19.8537C5.59582 20.007 6.28571 20.0836 6.89895 20.0836C8.27874 20.0836 9.65854 20.0836 10.9617 20.0836Z" fill="white"/>
-                        <path d="M11.0383 16.7112C7.89546 16.7112 5.36584 14.1815 5.36584 11.0387C5.36584 7.89583 7.89546 5.36621 11.0383 5.36621C14.1812 5.36621 16.7108 7.89583 16.7108 11.0387C16.6341 14.1815 14.1045 16.7112 11.0383 16.7112ZM11.0383 14.7181C13.108 14.7181 14.7178 13.1084 14.7178 11.0387C14.7178 9.04565 13.0313 7.35924 11.0383 7.35924C8.96863 7.35924 7.35888 8.969 7.35888 11.0387C7.35888 13.1084 8.96863 14.7181 11.0383 14.7181Z" fill="white"/>
-                        <path d="M18.2439 5.21294C18.2439 5.97949 17.6307 6.51608 16.9408 6.51608C16.1742 6.51608 15.6376 5.90284 15.6376 5.21294C15.6376 4.44639 16.2509 3.9098 17.0174 3.9098C17.6307 3.83315 18.2439 4.44639 18.2439 5.21294Z" fill="white"/>
+                            <path d="M11.0383 0C12.6481 0 14.1812 0.0766551 15.7909 0.0766551C16.7875 0.0766551 17.8606 0.30662 18.7805 0.76655C20.5436 1.68641 21.5401 3.0662 21.9233 4.98258C22.1533 6.1324 22.1533 7.28223 22.1533 8.43206C22.1533 10.5784 22.1533 12.7247 22.1533 14.8711C22.1533 15.8676 22.0767 16.9408 21.6934 17.9373C20.9268 20.007 19.4704 21.3101 17.324 21.77C16.6341 21.9233 15.9442 22 15.1777 22C12.4181 22 9.73519 22 6.97561 22C5.97909 22 4.98258 21.9233 3.98606 21.5401C1.99303 20.7735 0.689895 19.3171 0.30662 17.1707C0.076655 16.5575 0 15.7909 0 15.101C0 12.4181 0 9.73519 0 7.05226C0 6.05575 0.0766551 4.98258 0.45993 4.06272C1.22648 2.06969 2.68293 0.76655 4.82927 0.383275C5.59582 0.229965 6.36237 0.15331 7.12892 0.15331C8.43206 0.0766551 9.73519 0.0766551 11.0383 0ZM10.9617 20.0836C11.6516 20.0836 12.3415 20.0836 13.0314 20.0836C14.1812 20.0836 15.331 20.0836 16.4808 19.9303C18.3206 19.7003 19.6237 18.4739 19.8537 16.6341C20.007 15.7143 20.007 14.7944 20.007 13.9512C20.007 12.1882 20.007 10.5017 20.007 8.73868C20.007 7.6655 19.9303 6.66899 19.8537 5.59582C19.6237 3.7561 18.4739 2.45296 16.5575 2.14634C15.6376 1.99303 14.7178 1.99303 13.7979 1.91638C12.1882 1.91638 10.5784 1.91638 8.96864 1.91638C7.81881 1.91638 6.66899 1.91638 5.51916 2.06969C3.67944 2.37631 2.45296 3.60279 2.14634 5.44251C1.99303 6.36237 1.99303 7.20557 1.99303 8.12544C1.99303 9.96516 1.99303 11.8049 1.99303 13.6446C1.99303 14.6411 1.99303 15.7143 2.14634 16.7108C2.45296 18.3206 3.37282 19.3937 4.98258 19.8537C5.59582 20.007 6.28571 20.0836 6.89895 20.0836C8.27874 20.0836 9.65854 20.0836 10.9617 20.0836Z" fill="white"/>
+                            <path d="M11.0383 16.7112C7.89546 16.7112 5.36584 14.1815 5.36584 11.0387C5.36584 7.89583 7.89546 5.36621 11.0383 5.36621C14.1812 5.36621 16.7108 7.89583 16.7108 11.0387C16.6341 14.1815 14.1045 16.7112 11.0383 16.7112ZM11.0383 14.7181C13.108 14.7181 14.7178 13.1084 14.7178 11.0387C14.7178 9.04565 13.0313 7.35924 11.0383 7.35924C8.96863 7.35924 7.35888 8.969 7.35888 11.0387C7.35888 13.1084 8.96863 14.7181 11.0383 14.7181Z" fill="white"/>
+                            <path d="M18.2439 5.21294C18.2439 5.97949 17.6307 6.51608 16.9408 6.51608C16.1742 6.51608 15.6376 5.90284 15.6376 5.21294C15.6376 4.44639 16.2509 3.9098 17.0174 3.9098C17.6307 3.83315 18.2439 4.44639 18.2439 5.21294Z" fill="white"/>
                         </g>
                         <defs>
-                        <clipPath id="clip0_85_1659">
-                        <rect width="22.1533" height="22" fill="white"/>
-                        </clipPath>
+                            <clipPath id="clip0_85_1659">
+                                <rect width="22.1533" height="22" fill="white"/>
+                            </clipPath>
                         </defs>
                     </svg>                        
                 </a>
@@ -334,12 +326,22 @@
                     <a href="/products">Products</a>
                     <a href="/contact">Contact</a>
                     <a href="/careers">Careers</a>
-                    <a href="#">Privacy</a>
                 </div>
                 <p>Amplibit 2023. All rights reserved.</p>
             </div>
         </footer>
         <script>document.addEventListener("DOMContentLoaded",function(){function c(){d.classList.add("hover")}function e(){d.classList.remove("hover")}var d=document.getElementById("cursor"),b=document.querySelector(".hamby"),a=document.querySelector(".lets-talk"),g=document.querySelector(".logo"),f=document.querySelectorAll("a");document.body.addEventListener("mousemove",function(h){d.style.left=h.clientX+"px";d.style.top=h.clientY+"px"});b.addEventListener("click",function(){b.classList.contains("active")?(b.classList.remove("active"),document.body.classList.remove("navigationActive")):(b.classList.add("active"),document.body.classList.add("navigationActive"))});b.addEventListener("mouseenter",c);b.addEventListener("mouseleave",e);a.addEventListener("mouseenter",c);a.addEventListener("mouseleave",e);g.addEventListener("mouseenter",c);g.addEventListener("mouseleave",e);for(a=0;a<f.length;a++)f[a].addEventListener("mouseenter",c),f[a].addEventListener("mouseleave",e)});</script>
         <script>var buttons=document.querySelectorAll(".career-opening h3"),containers=document.querySelectorAll(".career-description");buttons.forEach(function(b,c){b.addEventListener("click",function(){var a=containers[c];if(a.classList.contains("active"))a.style.height="0px",a.addEventListener("transitionend",function(){a.classList.remove("active")},{once:!0});else{a.classList.add("active");a.style.height="auto";var d=a.clientHeight+"px";a.style.height="0px";setTimeout(function(){a.style.height=d},0)}})});</script>
+        <script>
+            setTimeout(()=> {
+                document.querySelector(".how-we-do-it-wrapper").classList.add("active");
+            }, 100);
+            document.addEventListener("scroll", function (e) {
+                0 > document.querySelector(".partners-title").getBoundingClientRect().bottom - window.innerHeight ? document.querySelector(".partners-title").classList.add("active") : document.querySelector(".partners-title").classList.remove("active"),
+                0 > document.querySelector(".partners-container").getBoundingClientRect().top - 0.9 * window.innerHeight ? document.querySelector(".partners-container").classList.add("active") : document.querySelector(".partners-container").classList.remove("active"),
+                0 > document.querySelector(".lets-talk").getBoundingClientRect().bottom - window.innerHeight ? document.querySelector(".lets-talk").classList.add("active") : document.querySelector(".lets-talk").classList.remove("active"),
+                0 > document.querySelector(".tell-us-about-it").getBoundingClientRect().bottom - window.innerHeight ? document.querySelector(".tell-us-about-it").classList.add("active") : document.querySelector(".tell-us-about-it").classList.remove("active")
+            });
+        </script>
     </body>
 </html>
