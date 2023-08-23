@@ -45,9 +45,25 @@
     height: 40px;
     border-color: #fff;
 }
+.cursor.hover:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border-radius: 50%;
+    opacity: 1;
+}
 .cursor-black.cursor {
     mix-blend-mode:normal;
     border-color: #000;
+}
+.cursor-black.cursor:after {
+    background-color: #000;
 }
 body {
     width: 100%;
