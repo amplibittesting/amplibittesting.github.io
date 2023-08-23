@@ -806,6 +806,7 @@ body.blue.green-back-only {
 }
 .single-service-details ul {
     padding-left: 2vw;
+    margin-bottom: 3.5vh;
 }
 .single-service-v2 p {
     color: #000;
@@ -2307,6 +2308,10 @@ footer .text-hello span:nth-of-type(even),
     .single-service-v2 p {
         font-size: 18px;
         margin-bottom: 30px;
+    }
+    .single-service-details ul {
+        padding-left: 25px;
+        margin-bottom: 40px;
     }
     .single-service-details li,
     .single-service-details a {
