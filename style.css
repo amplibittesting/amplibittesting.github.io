@@ -2308,6 +2308,9 @@ footer .text-hello span:nth-of-type(even),
     .contact-info-container p {
         margin-bottom: 50px;
     }
+    .main-nav a {
+        font-size: 32px;
+    }
 }
 
 @media screen and (max-width: 680px) {
@@ -2475,9 +2478,6 @@ footer .text-hello span:nth-of-type(even),
 
 @media screen and (max-width: 580px) {
     
-    .navigationActive header .logo path {
-        fill: #000;
-    }
     .logo {
         width: 130px;
     }
@@ -2575,7 +2575,7 @@ footer .text-hello span:nth-of-type(even),
         flex-flow: column;
     }
     .overlay-navigation {
-        padding: 15vh 7vw 5vh 10%;
+        padding: 15vh 7vw 10vh 10%;
     }
     .overlay-wrapper {
         transition: right 0.5s ease;

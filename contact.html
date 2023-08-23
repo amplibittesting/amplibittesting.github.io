@@ -243,9 +243,6 @@
                 <p>Amplibit 2023. All rights reserved.</p>
             </div>
         </footer>
-        <script>document.addEventListener("DOMContentLoaded",function(){function d(){f.classList.add("hover")}function e(){f.classList.remove("hover")}var f=document.getElementById("cursor"),c=document.querySelector(".hamby"),b=document.querySelector(".logo"),g=document.querySelectorAll("a"),h=document.querySelectorAll(".single-process"),k=document.querySelectorAll(".process-icon");document.body.addEventListener("mousemove",function(l){f.style.left=l.clientX+"px";f.style.top=l.clientY+"px"});c.addEventListener("click",
-            function(){c.classList.contains("active")?(c.classList.remove("active"),document.body.classList.remove("navigationActive"),setTimeout(function(){c.classList.remove("ready")},1E3)):(c.classList.add("active"),document.body.classList.add("navigationActive"),setTimeout(function(){c.classList.add("ready")},1E3))});c.addEventListener("mouseenter",d);c.addEventListener("mouseleave",e);b.addEventListener("mouseenter",d);b.addEventListener("mouseleave",e);for(a=0;a<g.length;a++)g[a].addEventListener("mouseenter",
-            d),g[a].addEventListener("mouseleave",e);for(b=0;b<h.length;b++)h[b].addEventListener("mouseenter",d),h[b].addEventListener("mouseleave",e);for(b=0;b<k.length;b++)k[b].addEventListener("mouseenter",d),k[b].addEventListener("mouseleave",e)});</script>
         <script>
             $('input[name="name"]').keyup(function(){
             if($(this).val() == 0){
@@ -352,12 +349,12 @@
                           document.body.classList.remove("navigationActive"),
                           setTimeout(function () {
                               a.classList.remove("ready");
-                          }, 1e3))
+                          }, 700))
                         : (a.classList.add("active"),
                           document.body.classList.add("navigationActive"),
                           setTimeout(function () {
                               a.classList.add("ready");
-                          }, 1e3));
+                          }, 700));
                 });
                 a.addEventListener("mouseenter", c);
                 a.addEventListener("mouseleave", e);

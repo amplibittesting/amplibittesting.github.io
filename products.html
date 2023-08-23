@@ -281,12 +281,12 @@
                           document.body.classList.remove("navigationActive"),
                           setTimeout(function () {
                               a.classList.remove("ready");
-                          }, 1e3))
+                          }, 700))
                         : (a.classList.add("active"),
                           document.body.classList.add("navigationActive"),
                           setTimeout(function () {
                               a.classList.add("ready");
-                          }, 1e3));
+                          }, 700));
                 });
                 a.addEventListener("mouseenter", c);
                 a.addEventListener("mouseleave", e);
