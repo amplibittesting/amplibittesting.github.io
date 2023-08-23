@@ -33,6 +33,13 @@
     border-color 0.3s ease,
     mix-blend-mode 0s ease;
 }
+.blue .cursor {
+    mix-blend-mode: unset;
+}
+.blue.green .cursor,
+.blue.navigationActive .cursor {
+    mix-blend-mode: difference;
+}
 .cursor.hover {
     width: 40px;
     height: 40px;
@@ -695,11 +702,20 @@ body.blue.green-back-only {
     background-color: #9BE545;
 }
 .single-service,
-.single-service-v2 {
+.single-service-v2,
+.single-service-details {
     margin: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.single-service-details {
+    align-items: flex-start;
+    width: 100%;
+}
+.single-service-details div {
+    width: 45%;
+    padding: 5vh 0 0;
 }
 
 .single-service img,
@@ -753,12 +769,24 @@ body.blue.green-back-only {
     line-height: 110%; 
     margin-bottom: 2.08vw;
 }
-.single-service p {
+.single-service p,
+.single-service-details p,
+.single-service-details li,
+.single-service-details a {
     color: #FFF;
     font-size: 1.25vw;
     font-weight: 500;
     line-height: 166.667%; 
     margin-bottom: 3.5vh;
+}
+.single-service-details  {
+    margin-bottom: 1vh;
+}
+.single-service-details li {
+    margin-bottom: 0;
+}
+.single-service-details ul {
+    padding-left: 2vw;
 }
 .single-service-v2 p {
     color: #000;
@@ -830,13 +858,13 @@ body.blue.green-back-only {
     transition: opacity 0.3s ease;
 }
 .product-icons > div:nth-of-type(2) .product-icon p{
-    transition: opacity 0.3s ease 0.5s;
-}
-.product-icons > div:nth-of-type(3) .product-icon p{
     transition: opacity 0.3s ease 1s;
 }
+.product-icons > div:nth-of-type(3) .product-icon p{
+    transition: opacity 0.3s ease 2s;
+}
 .product-icons > div:nth-of-type(4) .product-icon p{
-    transition: opacity 0.3s ease 1.5s;
+    transition: opacity 0.3s ease 3s;
 }
 
 .single-service-wrapper.active .product-icon p {
@@ -867,13 +895,13 @@ body.blue.green-back-only {
     transition: opacity 0.3s ease;
 }
 .product-icons > div:nth-of-type(2) svg {
-    transition: opacity 0.3s ease 0.5s;
-}
-.product-icons > div:nth-of-type(3) svg {
     transition: opacity 0.3s ease 1s;
 }
+.product-icons > div:nth-of-type(3) svg {
+    transition: opacity 0.3s ease 2s;
+}
 .product-icons > div:nth-of-type(4) svg {
-    transition: opacity 0.3s ease 1.5s;
+    transition: opacity 0.3s ease 3s;
 }
 .product-icons {
     display: flex;
@@ -927,7 +955,7 @@ body.blue.green-back-only {
     width: 0;
     left: 6.94vw;
     top: 8.3vw;
-    transition: width 1.5s linear;
+    transition: width 3s linear;
 }
 #ProductCatalog.active .product-icons::after {
     width: calc(100% - 13.88vw);
@@ -2251,10 +2279,15 @@ footer .text-hello span:nth-of-type(even),
         margin-bottom: 30px;
     }
     .single-service p,
+    .single-service-details p,
     .single-service-v2 p {
         font-size: 18px;
         margin-bottom: 30px;
     }
+    .single-service-details li {
+        font-size: 18px;
+    }
+
     .single-service a,
     .single-service-v2 a {
         border-radius: 25px;
@@ -2379,6 +2412,14 @@ footer .text-hello span:nth-of-type(even),
     .main-nav a {
         font-size: 32px;
     }
+    .single-service-details {
+        flex-flow: column;
+    }
+    .single-service-details > div {
+        width: 70%;
+        margin: auto;
+        padding: 50px 0 0;
+    }
 }
 
 @media screen and (max-width: 680px) {
@@ -2423,7 +2464,9 @@ footer .text-hello span:nth-of-type(even),
         margin-bottom: 20px;
     }
     .single-service p,
-    .single-service-v2 p {
+    .single-service-v2 p,
+    .single-service-details p,
+    .single-service-details li {
         font-size: 16px;
     }
     .single-service a,
@@ -2541,6 +2584,9 @@ footer .text-hello span:nth-of-type(even),
     }
     .email-sent p {
         font-size: 16px;
+    }
+    .single-service-details > div {
+        width: 100%;
     }
 }
 
