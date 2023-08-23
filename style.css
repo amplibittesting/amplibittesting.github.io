@@ -713,6 +713,9 @@ body.blue.green-back-only {
     align-items: flex-start;
     width: 100%;
 }
+.second-service .single-service-details {
+    flex-flow: row-reverse;
+}
 .single-service-details div {
     width: 45%;
     padding: 5vh 0 0;
@@ -2284,7 +2287,8 @@ footer .text-hello span:nth-of-type(even),
         font-size: 18px;
         margin-bottom: 30px;
     }
-    .single-service-details li {
+    .single-service-details li,
+    .single-service-details a {
         font-size: 18px;
     }
 
@@ -2412,13 +2416,14 @@ footer .text-hello span:nth-of-type(even),
     .main-nav a {
         font-size: 32px;
     }
-    .single-service-details {
+    .single-service-details,
+    .second-service .single-service-details {
         flex-flow: column;
     }
     .single-service-details > div {
         width: 70%;
         margin: auto;
-        padding: 50px 0 0;
+        padding: 40px 0 0;
     }
 }
 
@@ -2466,7 +2471,8 @@ footer .text-hello span:nth-of-type(even),
     .single-service p,
     .single-service-v2 p,
     .single-service-details p,
-    .single-service-details li {
+    .single-service-details li,
+    .single-service-details a {
         font-size: 16px;
     }
     .single-service a,
