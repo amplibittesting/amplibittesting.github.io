@@ -150,20 +150,26 @@ html {
     font-weight: 600;
 }
 
-header {
+.logo-wrapper {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 3.8vw 3.8vw 0 3.8vw;
-    display: flex;
-    justify-content: space-between;
-    z-index: 999;
+    left: 3.8vw;
+    top: 3.8vw;
     mix-blend-mode: difference;
+    z-index: 999;
 }
-.blue header,
-.green header,
-.green-back-only header {
+.hamby-wrapper {
+    position: fixed;
+    right: 3.8vw;
+    top: 3.8vw;
+    mix-blend-mode: difference;
+    z-index: 999;
+}
+.blue header .logo-wrapper,
+.blue header .hamby-wrapper,
+.green header .logo-wrapper,
+.green header .hamby-wrapper,
+.green-back-only header .logo-wrapper,
+.green-back-only header .hamby-wrapper  {
     mix-blend-mode: unset;
 }
 .green header path{
@@ -177,6 +183,9 @@ header {
 }
 .green-back-only header .hamby span{
     background-color: #fff;
+}
+.navigationActive header .logo-wrapper {
+    mix-blend-mode: unset;
 }
 .logo {
     width: 12vw;
@@ -530,6 +539,7 @@ header {
 }
 .partners-container a:nth-of-type(4) {
     transition: bottom 0.3s ease-in 0.4s, opacity 0.3s ease-in 0.4s;
+    width: 14vw;
 }
 .partners-container a:nth-of-type(5) {
     transition: bottom 0.3s ease-in 0.5s, opacity 0.3s ease-in 0.5s;
